@@ -3,18 +3,13 @@ var noteTotal = 0;
 var noteCount = 0;
 
 
-
-
 $( ".note" ).click(function() {
-
-
 
   var maximum = 10;
   var minimum = -10;
   var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
   console.log(randomnumber);
-
 
 
   var value = parseInt($(this).data("value"));
@@ -31,8 +26,8 @@ $( ".note" ).click(function() {
   $(latest).css('-webkit-transform', 'rotate('+randomnumber+'deg)');
   // $(latest).css('border', 'solid 3px red');
 
-  $( latest ).animate({
-    opacity: 1,
+  // $( latest ).animate({
+    // opacity: 1,
     // -webkit-transform:rotate(0deg)
     // transform:rotate(0deg)
 //'-webkit-transform: rotate('+randomnumber+'deg)'
@@ -40,7 +35,7 @@ $( ".note" ).click(function() {
     // height: "toggle"
   // }, 5000, function() {
     // Animation complete.
-  });
+  // });
 
 
 
