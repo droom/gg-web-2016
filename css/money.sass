@@ -1,5 +1,5 @@
 body
-  font-family: helvetica, arial, sans
+  font-family: helvetica, sans-serif
   font-size: 12px
   background: #ddd
   -webkit-touch-callout: none
@@ -16,15 +16,18 @@ html
   &:before, &:after
     box-sizing: inherit
 
+h1
+  text-align: center
+  font-size: 14px
+  text-transform: uppercase
+  letter-spacing: 0.02em
+  opacity: 0.5
+  margin: 0 auto
+  padding: 10px
+
 .note, .pot
   cursor: pointer
-.notes
-  top: 300px
-  position: relative
-  width: 280px
-  height: 200px
-  margin: auto
-  background: #ccc
+
 .note
   z-index: 1
   width: 100px
@@ -36,57 +39,12 @@ html
   position: absolute
   -webkit-transform: translate3d(0, 0, 0)
   -webkit-transform: rotate(90deg)
-.pot
-  z-index: 5
-  width: 280px
-  height: 50px
-  text-align: center
-  position: relative
-  border-radius: 2px
-  padding: 10px 10px 100px 10px
-  left: 0
-  top: -200px
-.hello
-  border: none
-.note-1
-  top: 50px
-  left: 0px
-  background: darkcyan
 
-.note-2
-  top: 50px
-  left: 60px
-  background: gold
-
-.note-3
-  top: 50px
-  left: 120px
-  background: coral
-
-.note-4
-  top: 50px
-  left: 180px
-  background: lightgreen
-
-.note-1:after
-  margin: 13px 0 0 8px
-  content: 'RM50'
-  text-align: center
-  float: left
-  font-size: 12px
-
-.note-2:before
-  margin: 13px 0 0 8px
-  content: 'RM20'
-  text-align: center
-  float: left
-  font-size: 12px
-
-div
   &[data-add='1'], &[data-add='2'], &[data-add='3'], &[data-add='4']
     z-index: 2
     transition: all 400ms ease
     animation: 300ms ease-out forwards
+    pointer-events: none
   &[data-add='1']
     animation-name: add-1
   &[data-add='2']
@@ -107,79 +65,156 @@ div
   &[data-return='4']
     animation-name: return-4
 
+.wrap
+  width: 265px
+  height: 200px
+  margin: 50px auto
+
+.notes
+  width: 265px
+  top: 310px
+  height: 100px
+  position: absolute
+
+.pot
+  border-radius: 4px
+  background: #eee
+  z-index: 5
+  height: 160px
+  text-align: center
+  padding: 10px 10px 100px 10px
+
+
+.note-1
+  top: $note-1-top
+  left: $note-1-left
+  background: $note-1-colour
+
+.note-2
+  top: $note-2-top
+  left: $note-2-left
+  background: $note-2-colour
+
+.note-3
+  top: $note-3-top
+  left: $note-3-left
+  background: $note-3-colour
+
+.note-4
+  top: $note-4-top
+  left: $note-4-left
+  background: $note-4-colour
+
+.note-1:after
+  margin: 13px 0 0 8px
+  content: 'RM50'
+  text-align: center
+  float: left
+  font-size: 12px
+
+.note-2:before
+  margin: 13px 0 0 8px
+  content: 'RM20'
+  text-align: center
+  float: left
+  font-size: 12px
+
+.note-3:before
+  margin: 13px 0 0 8px
+  content: 'RM10'
+  text-align: center
+  float: left
+  font-size: 12px
+
+.note-4:before
+  margin: 13px 0 0 8px
+  content: 'RM5'
+  text-align: center
+  float: left
+  font-size: 12px
+
+
 @keyframes add-1
   0%
-    top: 0
-    -webkit-transform: rotate(90deg)
+    top: $note-1-top
+    left: $note-1-left
+    -webkit-transform: $note-rotate
 
   100%
-    top: -200px
+    top: $note-add-top
+    left: $note-add-left
 
 
 @keyframes add-2
   0%
-    left: 60px
-    -webkit-transform: rotate(90deg)
+    top: $note-2-top
+    left: $note-2-left
+    -webkit-transform: $note-rotate
 
   100%
-    top: -200px
+    top: $note-add-top
+    left: $note-add-left
 
 
 @keyframes add-3
   0%
-    left: 120px
-    -webkit-transform: rotate(90deg)
+    top: $note-3-top
+    left: $note-3-left
+    -webkit-transform: $note-rotate
 
   100%
-    top: -200px
-
+    top: $note-add-top
+    left: $note-add-left
 
 @keyframes add-4
   0%
-    left: 180px
-    -webkit-transform: rotate(90deg)
+    top: $note-4-top
+    left: $note-4-left
+    -webkit-transform: $note-rotate
 
   100%
-    top: -200px
+    top: $note-add-top
+    left: $note-add-left
 
 
 @keyframes return-1
   0%
-    top: -200px
+    top: $note-add-top
+    left: $note-add-left
 
   100%
-    top: 0
-    -webkit-transform: rotate(90deg)
-
+    top: $note-1-top
+    left: $note-1-left
+    -webkit-transform: $note-rotate
 
 @keyframes return-2
   0%
-    top: -200px
-    left: 0
+    top: $note-add-top
+    left: $note-add-left
 
   100%
-    top: 60px
-    left: 0
-    -webkit-transform: rotate(-90deg)
+    top: $note-2-top
+    left: $note-2-left
+    -webkit-transform: $note-rotate
 
 
 @keyframes return-3
   0%
-    top: 0
-    left: 0
+    top: $note-add-top
+    left: $note-add-left
 
   100%
-    top: 0
-    left: 0
-    -webkit-transform: rotate(-90deg)
+    top: $note-3-top
+    left: $note-3-left
+    -webkit-transform: $note-rotate
 
 
 @keyframes return-4
   0%
-    top: 0
-    left: 0
+    top: $note-add-top
+    left: $note-add-left
 
   100%
-    top: 0
-    left: 0
-    -webkit-transform: rotate(-90deg)
+    top: $note-4-top
+    left: $note-4-left
+    -webkit-transform: $note-rotate

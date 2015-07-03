@@ -2,15 +2,11 @@ var noteArray = [];
 var noteTotal = 0;
 var noteCount = 0;
 
-
 $( ".note" ).click(function() {
 
   var maximum = 10;
   var minimum = -10;
   var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-
-  console.log(randomnumber);
-
 
   var value = parseInt($(this).data("value"));
   var type = parseInt($(this).data("type"));
@@ -24,21 +20,6 @@ $( ".note" ).click(function() {
   var latest = $("[data-count=\""+noteCount+"\"]");
 
   $(latest).css('-webkit-transform', 'rotate('+randomnumber+'deg)');
-  // $(latest).css('border', 'solid 3px red');
-
-  // $( latest ).animate({
-    // opacity: 1,
-    // -webkit-transform:rotate(0deg)
-    // transform:rotate(0deg)
-//'-webkit-transform: rotate('+randomnumber+'deg)'
-    // left: "+=50",
-    // height: "toggle"
-  // }, 5000, function() {
-    // Animation complete.
-  // });
-
-
-
 
 
 });

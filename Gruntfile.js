@@ -6,11 +6,30 @@ module.exports = function(grunt) {
 
 
     watch: {
+
+      options: {
+        livereload: true,
+      },
+
       sass: {
         files: ['css/*.sass'],
-        tasks: ['sass']
+        tasks: ['sass'],
+      },
+
+      // uglify: {
+      //   files: ['js/src/money.js'],
+      //   tasks: ['uglify']
+      // },
+
+      jade: {
+        files: ['jade/index.jade'],
+        tasks: ['jade'],
+
       }
+
     },
+
+
 
     uglify: {
       options: {
@@ -28,7 +47,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'css/money.css': 'css/money.sass',
+          'css/style.css': 'css/style.sass',
         }
       }
     },

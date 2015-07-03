@@ -1,17 +1,18 @@
 html
   heead
     meta(charset='utf-8')
-    link(rel='stylesheet', media='screen', href='css/money.css')
+    link(rel='stylesheet', media='screen', href='css/style.css')
   body
     h1 How much?
-    .notes
+    .wrap
       .pot
         p
           | RM
           span.total 0
-      .note.note-1(data-type='1', data-value='50')
-      .note.note-2(data-type='2', data-value='20')
-      .note.note-3(data-type='3', data-value='10')
-      .note.note-4(data-type='4', data-value='5')
+      .notes
+        .note.note-1(data-type='1', data-value='50')
+        .note.note-2(data-type='2', data-value='20')
+        .note.note-3(data-type='3', data-value='10')
+        .note.note-4(data-type='4', data-value='5')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
     script(src='js/build/money.min.js')
