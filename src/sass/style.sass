@@ -1,0 +1,80 @@
+$bg: #f2f2f2
+$darkGrey: #444
+$beggars:#ddddac
+$light: #d9e3e5
+$dark: #404040
+$copyLight: #f7f7f7
+$copyDark: #2e2e2e
+$pink: #db919d
+
+$transition: all 200ms ease 
+
+@import "partials/reset.sass"
+@import "partials/base.sass"
+@import "partials/nav.sass"
+@import "partials/motion.sass"
+
+@import "sections/hero.sass"
+@import "sections/split.sass"
+@import "sections/steps.sass"
+@import "sections/use.sass"
+
+
+ol
+  li
+    outline: blue 2px solid
+    .wrap
+      position: relative
+      outline: yellow 2px solid
+      margin: auto
+      height: 60px
+      width: 60px
+      img
+        position: absolute
+        top: 0
+        left: 0
+        height: 60px
+        width: 60px
+
+  &.turn
+    li
+      .wrap
+        img
+          animation-name: turnRight
+          animation-duration: 800ms 
+          animation-timing-function: ease-out
+          animation-fill-mode: forwards
+          animation-play-state: running
+    
+    li:nth-child(1)
+      .wrap
+        img
+          animation-delay: 0
+    
+    li:nth-child(2)
+      .wrap
+        img
+          animation-delay: 250ms
+          
+    li:nth-child(3)
+      .wrap
+        img
+          animation-delay: 500ms
+
+
+@keyframes turnRight
+  0%
+    opacity: 1
+    transform: rotateY(0deg)
+
+  50%
+    opacity: 0
+
+  100%
+    opacity: 0
+    transform: rotateY(180deg)
+    
+
+
+
+

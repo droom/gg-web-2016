@@ -1,0 +1,78 @@
+section.hero
+  background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/hero-1.jpg') 50% 50%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 20px
+
+  a.arrow
+    opacity: 0.4
+    width: 10%
+    transition: $transition
+    &:hover
+      opacity: 1
+    &.left
+      text-align: left
+    &.right
+      text-align: right
+
+  .title
+    width: 80%
+    margin-top: 50px
+    text-align: center
+    padding: 30px
+    
+    h1
+      color: white
+      text-align: center
+      filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9))
+
+    .slider-nav
+      text-align: center
+      margin: 40px 0 0 0
+      a + a
+        margin-left: 12px
+      a
+        width: 10px
+        height: 10px
+        display: inline-block
+        background: white
+        overflow: hidden
+        text-indent: -9999px
+        border-radius: 50%
+        opacity: 0.5
+        
+        &.active
+          opacity: 1
+
+
+@media (max-width: 500px)
+  section.hero
+    background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/hero-1.jpg') 50% 40%
+    padding-top: 50px
+
+    a.arrow
+      width: 15%
+      outline: blue 1px solid
+
+    .title
+      background: rgba(0,0,0,0.4)
+      margin-top: 0
+      width: 70%
+      
+      .slider-nav
+        a
+          width: 12px
+          height: 12px
+          
+        a + a
+          margin-left: 20px
+
+      h1
+        font-size: 1.5em
+        padding: 0
+
+
+
+

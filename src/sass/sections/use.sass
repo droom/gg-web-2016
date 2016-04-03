@@ -1,0 +1,46 @@
+section.use
+  min-height: 450px
+  color: white
+  background: #333
+  text-align: center
+  width: 100%
+  margin: 0 auto
+  padding: 40px 20px
+
+  ul.categories
+    max-width: 1000px
+    margin: 30px 0
+    margin: auto
+    > li::before
+      content: url('../img/icon.png')
+      display: block
+      margin: 0 0 15px 0
+    > li
+      text-align: center
+      display: inline-block
+      width: calc(100%/5)
+      vertical-align: top
+      text-transform: uppercase
+      margin: auto
+      margin-bottom: 40px
+
+      ul.examples
+        margin-top: 30px
+        li
+          text-align: center
+          display: block
+          width: 100%
+
+@media (max-width: 900px)
+  section.use
+    ul.categories
+      > li
+        width: calc(100%/3)
+
+
+@media (max-width: 550px)
+  section.use
+    ul.categories
+      > li
+        width: calc(100%/2)
+        background: pink

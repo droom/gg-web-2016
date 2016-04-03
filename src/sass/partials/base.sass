@@ -1,0 +1,82 @@
+body
+  font-family: 'Roboto', sans-serif
+  background: #333
+
+h1, h2
+  color: white
+  font-weight: 200
+  font-size: 32px 
+  letter-spacing: 0.045em
+
+h3, .h3
+  font-size: 13px
+  line-height: 1.445em
+  text-transform: uppercase
+  font-weight: 400
+  letter-spacing: 0.045em
+  
+section
+  h2
+    padding: 0 0 40px 0
+
+small, p, li
+  font-size: 12px
+  font-weight: 300
+  line-height: 1.4em
+
+section.tiles,
+section.split,
+section.use
+  img
+    width: 100%
+
+.breathe
+  letter-spacing: 0.075em
+
+.no-list li
+  list-style: none
+
+::selection
+  background-color: rgba( 0, 180, 173, 0.8)
+  
+.no-select
+  user-select: none
+
+
+a
+  color: white
+
+  &.plain
+    text-decoration: none
+    
+  &.hover
+    text-decoration: none  
+    &:hover
+      text-decoration: underline
+
+  &.underline
+    text-decoration: underline  
+    &:hover
+      text-decoration: underline
+      
+
+
+footer
+  background: #333
+  padding: 40px
+  a
+    color: white
+  small
+    color: white
+    margin-top: 60px
+    display: block
+  ul
+    li
+      list-style: none
+      color: white
+
+  ul.internal
+    column-count: 2
+    column-gap: 10px
+    column-width: 150px
+

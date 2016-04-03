@@ -12,23 +12,54 @@ module.exports = function(grunt) {
       },
 
       sass: {
-        files: ['css/*.sass'],
+        files: [
+        'src/sass/*.sass',
+        'src/sass/sections/*.sass',
+        'src/sass/partials/*.sass'
+        ],
         tasks: ['sass'],
       },
 
-      // uglify: {
-      //   files: ['js/src/money.js'],
-      //   tasks: ['uglify']
-      // },
+      concat: {
+        files: ['src/js/*.js'],
+        tasks: ['concat']
+      },
 
       jade: {
-        files: ['jade/index.jade'],
+        files: [
+        'src/jade/index.jade',
+        'src/jade/sections/*.jade',
+        'src/jade/partials/*.jade'
+        ],
         tasks: ['jade'],
+      },
 
+      postcss: {
+        files: [
+        'src/sass/*.sass',
+        'src/sass/sections/*.sass',
+        'src/sass/partials/*.sass'
+        ],
+
+
+        tasks: ['postcss'],
       }
-
     },
 
+    concat: {
+      options: {
+        separator: ';',
+      },
+      js: {
+        src: [
+        'src/lib/jquery.min.js',
+        'src/lib/easing.js',
+        'src/lib/noframework.waypoints.js',
+        'src/js/*.js'
+        ],
+        dest: 'dist/js/main.min.js',
+      },
+    },
 
 
     uglify: {
@@ -36,8 +67,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'js/src/money.js',
-        dest: 'js/build/money.min.js'
+        src: 'src/js/main.js',
+        dest: 'dist/js/main.min.js'
       }
     },
 
@@ -47,40 +78,48 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'css/style.css': 'css/style.sass',
+          'dist/css/style.css': 'src/sass/style.sass',
         }
       }
     },
 
-    jade: {
-      compile: {
-        options: {
-          data: {
-            debug: false
-          }
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+          require('cssnano')() // minify the result
+          ]
         },
-        files: {
-          "index.html": ["jade/index.jade"]
+        dist: {
+          src: 'dist/css/style.css'
+        }
+      },
+
+      jade: {
+        compile: {
+          options: {
+            data: {
+              debug: false
+            }
+          },
+          files: {
+            "dist/index.html": ["src/jade/index.jade"]
+          }
         }
       }
-    }
 
-  });
+    });
 
 
-  // watch me now
   grunt.loadNpmTasks('grunt-contrib-watch');
-
-  // jade
   grunt.loadNpmTasks('grunt-contrib-jade');
-
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  // Sass it up
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify', 'sass']);
+  // grunt.registerTask('default', [ 'sass', 'postcss', 'jade' ]);
 
 };
