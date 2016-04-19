@@ -4,6 +4,9 @@ a
   &.block
     display: block
 
+  &.block + .block
+    margin-top: 10px
+
   &.inline-block
     display: inline-block
 
@@ -32,14 +35,19 @@ a
     
   &.cta
     background: rgba(0,180,173,0.5)
-    display: inline-block
     &:hover
       background: rgba(255,255,255,0.9)
-    &.shadow
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.6)
+
+
+  &.small
+    font-size: $font-sm-pt
+    line-height: $font-sm-ld
+    padding: 15px
 
   &.app + a.app
-    margin-left: 8px
+    margin-left: 6px
+
+
 
   &.arrow
     opacity: 0.4

@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
       jade: {
         files: [
-        'src/jade/index.jade',
+        'src/jade/*.jade',
         'src/jade/sections/*.jade',
         'src/jade/partials/*.jade'
         ],
@@ -105,7 +105,9 @@ module.exports = function(grunt) {
             }
           },
           files: {
-            "dist/index.html": ["src/jade/index.jade"]
+            "dist/become.html": ["src/jade/become.jade"],
+            "dist/index.html": ["src/jade/index.jade"],
+            "dist/jobs.html": ["src/jade/jobs.jade"]
           }
         }
       }

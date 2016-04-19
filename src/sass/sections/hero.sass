@@ -1,24 +1,95 @@
-header
+header.index
   background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/hero/hero-1.jpg') 50% 50%
-  .flex.wrap.inner
-    height: 600px
+
+header.become
+  background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/hero/hero-become.jpg') 50% 20%
+
+header.jobs
+  background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/hero/hero-jobs.jpg') 50% 30%
+
+header
+  .flex.wrap
+    height: 90%
     nav
       .unit
         width: 50%
         transition: $transition
       .unit:nth-child(1)
         text-align: left
+        .logo
+          transition: $transition
+          width: 130px
       .unit:nth-child(2)
         text-align: right
 
+      ol li
+        display: inline
+        color: white
+        a
+          transition: $transition
+          border-radius: 3px
+          padding: 10px
+          color: white
+          font-size: 12px
+          background: rgba(0,0,0,0.2)
+          
+          &:hover
+            background: rgba(255,255,255,0.4)
+
+        & + li
+        margin-left: 15px
+
+        &.focus
+          a
+            border: 1px solid white
+
+
+header.index
+  .flex.wrap
     section.hero
       .unit:nth-child(1)
         width: 15%
         text-align: left
       .unit:nth-child(2)
         width: 70%
-        // margin-top: 30px
       .unit:nth-child(3)
         width: 15%
         text-align: right
+
+
+@media (max-width: 550px)
+  header
+    .flex.wrap
+      nav
+        .unit:nth-child(1)
+          width: 70%
+          .logo
+            width: 90px
+
+        .unit:nth-child(2)
+          width: 30%
+
+        ol li
+          text-align: center
+          display: block
+          margin-left: 0
+          
+          a
+            display: block
+            border: 1px solid white
+          
+          & + li
+            margin-left: 0
+            margin-top: 5px
+      section.hero
+        h1
+          padding: 20px 20px 25px 20px
+          color: $copyDark 
+          background: rgba(255,255,255,0.8)
+
+        .slider-nav
+          display: none
+          
+        a.arrow
+          opacity: 0.5
 

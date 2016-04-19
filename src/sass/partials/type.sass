@@ -1,6 +1,9 @@
 body
   font-family: 'Roboto', sans-serif
-  background: #333
+  background: $copyDark
+
+h1
+  color: white
 
 h1, .h1,
 h2, .h2, 
@@ -15,7 +18,33 @@ h3, .h3
   text-transform: uppercase
   font-weight: 400
   letter-spacing: 0.045em
+
+dl
+  font-size: $font-sm-pt
+  line-height: $font-sm-ld
+
+dl dd
+  display: inline
+  font-weight: bold
+
+dl dt
+  display: inline-block
+  min-width: 90px
+
+dl + p
+  margin-top: 3em
+
+p + p
+  margin-top: 1em
+
+
+p + ul
+  margin-top: 1.5em
+    
+ul + p
+  margin-top: 1.5em
   
+
 small .small, p .p, li .li
   font-size: 12px
   font-weight: 300
@@ -24,6 +53,9 @@ small .small, p .p, li .li
 
 .reset li
   list-style: none
+
+.indent li
+  margin-left: 2em
 
 
 .center
@@ -35,11 +67,6 @@ small .small, p .p, li .li
 
 .shadow
   filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9))
-
-
-
-
-
 
 ::selection
   background-color: rgba( 0, 180, 173, 0.8)
