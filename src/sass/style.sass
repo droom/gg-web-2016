@@ -6,74 +6,79 @@ $dark: #404040
 $copyLight: #f7f7f7
 $copyDark: #2e2e2e
 $pink: #db919d
-
+$greyLight: #e7e7e7
+$max: 900px
 $transition: all 200ms ease 
 
 @import "partials/reset.sass"
-@import "partials/base.sass"
+@import "partials/type.sass"
 @import "partials/nav.sass"
+@import "partials/links.sass"
+@import "partials/pips.sass"
+@import "partials/split.sass"
 @import "partials/motion.sass"
+@import "partials/colour.sass"
 
+@import "sections/app.sass"
 @import "sections/hero.sass"
-@import "sections/split.sass"
 @import "sections/steps.sass"
 @import "sections/use.sass"
+@import "sections/available.sass"
+@import "sections/wisdom.sass"
+@import "sections/earn.sass"
+@import "sections/quote.sass"
+@import "sections/become.sass"
+@import "sections/video.sass"
 
 
-ol
-  li
-    outline: blue 2px solid
-    .wrap
-      position: relative
-      outline: yellow 2px solid
-      margin: auto
-      height: 60px
-      width: 60px
-      img
-        position: absolute
-        top: 0
-        left: 0
-        height: 60px
-        width: 60px
+.flex
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  
+  .unit
+    outline: 1px solid blue
 
-  &.turn
-    li
-      .wrap
-        img
-          animation-name: turnRight
-          animation-duration: 800ms 
-          animation-timing-function: ease-out
-          animation-fill-mode: forwards
-          animation-play-state: running
-    
-    li:nth-child(1)
-      .wrap
-        img
-          animation-delay: 0
-    
-    li:nth-child(2)
-      .wrap
-        img
-          animation-delay: 250ms
-          
-    li:nth-child(3)
-      .wrap
-        img
-          animation-delay: 500ms
+.flex + .flex
+  margin-top: 40px
 
 
-@keyframes turnRight
-  0%
-    opacity: 1
-    transform: rotateY(0deg)
+section.contents,
+section.social,
+section.earn,
+section.quote,
+section.tiles,
+section.steps,
+section.use,
+section.wisdom,
+header,
+footer
+  width: 100%
+  margin: auto
 
-  50%
-    opacity: 0
 
-  100%
-    opacity: 0
-    transform: rotateY(180deg)
-    
+section,
+header,
+footer
+  h2
+    padding: 30px 40px 10px 40px
+
+.inner
+  padding: 30px 40px 55px 40px
+  max-width: $max
+  margin: auto
+
+
+@media (max-width: 500px)
+  section,
+  footer
+    h2
+      background: rgba(255,255,255,0.04)
+      padding: 30px 40px 30px 40px
+
+
 
 
 

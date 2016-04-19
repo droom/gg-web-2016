@@ -1,71 +1,17 @@
-header
-  position: relative
-  nav
-    position: absolute
-    top: 0
-    left: 0
-    padding: 20px
-    width: 100%
-    display: flex
-    
-    align-items: center
-    .left
-      width: 50%
-      .logo
-        width: 130px
-        transition: $transition
-        
+nav ol li
+  display: inline
+  color: white
+  a
+    transition: $transition
+    border-radius: 3px
+    padding: 10px
 
-    .right
-      width: 50%
-      text-align: right
-      ol
-        li
-          display: inline
-          color: white
-          a
-            transition: $transition
-            border-radius: 3px
-            padding: 10px
-            
-            &:hover
-              background: rgba(255,255,255,0.4)
-              
-        li + li
-          margin-left: 15px
-        
-        li.login
-          a
-            border: 1px solid white
+    &:hover
+    background: rgba(255,255,255,0.4)
 
+  & + li
+  margin-left: 15px
 
-@media (max-width: 500px)
-  header
-    nav
-      align-items: flex-start
-      .left
-        width: 80%
-        .logo
-          width: 90px
-      .right
-        width: 20%
-        
-        ol
-          margin-top: 18px
-          text-align: center
-          li
-            display: block
-            margin-right: 0
-            margin-bottom: 25px
-          
-            &.faq,
-            &.blog
-              display: none
-              background: yellow
-            
-          li.login
-            a
-              border: 1px solid white
-              border-radius: 3px
-              &:hover
-                background: rgba(255,255,255,0.4)
+  &.login
+    a
+      border: 1px solid white
