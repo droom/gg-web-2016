@@ -1,7 +1,7 @@
 header
-  .Aligner.inner  
-    .Aligner-item.Aligner-item--top
-      nav
+  .flex.wrap.inner
+    .unit.top
+      nav.flex
         .unit
           img(src="img/logo.png").logo
         .unit
@@ -14,10 +14,8 @@ header
               a(href="#").plain.breathe Blog
 
 
-
-    .Aligner-item
-      section.hero
-
+    .unit
+      section.hero.flex
         .unit
           a(href="#slide-prev").arrow.left
             img(src="img/arrow-left.svg").button
@@ -34,7 +32,8 @@ header
             img(src="img/arrow-right.svg").button
 
 
-    .Aligner-item.Aligner-item--bottom
+
+    .unit.bottom
       a(href="#").app.plain
         img(src="img/app-play.png")
       a(href="#").app.plain

@@ -1,14 +1,13 @@
 section.video.center.dark
-
-  .controls.flex
-    .unit
+  .controls.flex.wrap
+    .unit.top
       h2 Introduction to GoGet
     .unit
-      a(href="#")
-        img(src="img/play.png").play
-    .unit
+      a(href="#")#play
+        img(src="img/play.png")
+    .unit.bottom
       small Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-  video(width="100%" controls poster="video/poster.jpg")
+  video(width="100%" poster="video/poster.jpg")#movie
     source(src="video/hello.mov" type="video/mp4")
 
