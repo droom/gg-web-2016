@@ -8,10 +8,10 @@ section.video
     z-index: 8
     width: 100%
     height: 100%
-    .unit
-      small
-        display: block
-        padding: 20px
+
+  small.info
+    display: block
+    padding: 20px
 
   video
     z-index: 1
@@ -25,3 +25,12 @@ section.video
 
 section.video:hover .controls .unit .btnVideo
   opacity: 1
+
+
+
+@media (max-width: 600px)
+  section.video
+    h2
+      display: none
+    small.info
+      display: none
