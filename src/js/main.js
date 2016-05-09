@@ -2,14 +2,17 @@ $( document ).ready(function() {
 
 	if ( $('.steps').length ) {
 
-	var returnShow = new Waypoint({
-		element: document.getElementById('steps'),
-		handler: function(direction) {
-			$("#steps ol").addClass('turn');
-		}, offset: 200
-	})
-
+		var returnShow = new Waypoint({
+			element: document.getElementById('steps'),
+			handler: function(direction) {
+				$("#steps ol .flip").addClass('turn');
+			}, offset: 200
+		})
 	}
+
+
+
+
 
 
 	var vidPaused = true
@@ -35,8 +38,6 @@ $( document ).ready(function() {
 		return false;
 
 	});
-
-
 
 
 

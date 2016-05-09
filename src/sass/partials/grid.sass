@@ -1,36 +1,5 @@
-.flex
-  width: 100%
-  display: flex
-
-  &.center-v
-    align-items: center
-    
-  &.center-h
-    justify-content: center
-    text-align: center
-
-  &.wrap
-    flex-wrap: wrap
-    .unit
-      width: 100%
-
-  .unit
-    // outline: 1px solid blue
-
-    &.stretch
-      flex-grow: 1
-    
-    &.top
-      align-self: flex-start
-    
-    &.center
-      align-self: center
-
-    &.bottom
-      align-self: flex-end
-
-.flex + .flex
-  margin-top: 40px
+body
+  min-width: 320px
 
 
 section.contents,
@@ -58,11 +27,11 @@ footer
     padding: 0
 
 .bind-wide  
-  max-width: $max-wide
+  max-width: $bind-wide
   margin: auto
 
 .bind  
-  max-width: $max
+  max-width: $bind-med
   margin: auto
 
 
@@ -83,4 +52,38 @@ footer
     padding: 15px 15px 30px 15px
     h2
       padding: 0
+
+
+
+.flex
+  width: 100%
+  display: flex
+
+  &.center-v
+    align-items: center
+    
+  &.center-h
+    justify-content: center
+    text-align: center
+
+  &.wrap
+    flex-wrap: wrap
+    .unit
+      width: 100%
+
+  .unit
+    &.stretch
+      flex-grow: 1
+    
+    &.top
+      align-self: flex-start
+    
+    &.center-v
+      align-self: center
+
+    &.bottom
+      align-self: flex-end
+
+.flex + .flex
+  margin-top: 40px
 

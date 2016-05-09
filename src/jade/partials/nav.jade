@@ -1,10 +1,16 @@
 nav.flex.center-v
   .unit.top
-    a(href="index.html").plain
-      img(src="img/logo.png").logo
-  .unit
+    .wordmark
+      .flip.delay500.no-select.turn
+        img(src="img/global/logo-roundel-mascot.png").first
+        img(src="img/global/logo-roundel-wordmark.png").second
+      
+      .static      
+        img(src="img/global/logo-wordmark.png").static
+
+  .unit.center-v
     ol
-      li.focus
+      li.cta
         a(href="#").plain.caps Sign In
       li
         a(href="#").plain.caps Sign Up

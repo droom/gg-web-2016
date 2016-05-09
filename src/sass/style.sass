@@ -1,26 +1,36 @@
-$bg:          #f2f2f2
-$copyLight:   #f7f7f7
-$copyDark:    #2e2e2e
+$bind-med:        900px
+$bind-wide:    	  1200px
+$transition:      all 200ms ease 
 
-$max:         900px
-$max-wide:    1200px
+// SWATCH
+$bg:              #f2f2f2
+$copyLight:       #f7f7f7
+$copyDark:        #2e2e2e
+$teal:            rgba(0, 180, 173, 0.9)
+$white:           rgba(255,255,255,0.9)		
 
-$font-sm-pt:  0.8em 
-$font-sm-ld:  1.5em
+// TYPE
+$roboto:          "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 
-$transition:  all 200ms ease 
+$font-sm-pt:      0.8em 
+$font-sm-ld:      1.5em
+$headlines:       $roboto
+$running: 		    $roboto
+$testimonials: 	  $roboto
+
+$app-buttons:     none
 
 
 @import "partials/reset.sass"
 @import "partials/type.sass"
 @import "partials/links.sass"
 @import "partials/pips.sass"
-@import "partials/motion.sass"
 @import "partials/colour.sass"
 @import "partials/grid.sass"
+@import "partials/hero.sass"
+@import "partials/nav.sass"
 
 @import "sections/app.sass"
-@import "sections/hero.sass"
 @import "sections/steps.sass"
 @import "sections/use.sass"
 @import "sections/available.sass"
@@ -31,3 +41,17 @@ $transition:  all 200ms ease
 @import "sections/footer.sass"
 @import "sections/job.sass"
 @import "sections/about.sass"
+
+@import "motion/app.sass"
+@import "motion/flip.sass"
+
+
+.wordmark
+  position: relative
+  height: 75px
+  
+  .flip,
+  .static
+    position: absolute
+    top: 0
+    left: 0
