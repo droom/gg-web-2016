@@ -57,3 +57,20 @@ $nav-bg:          $off
 @import "motion/app.sass"
 @import "motion/flip.sass"
 
+
+html, body
+  height: 100%
+  min-height: 100%
+
+nav.flex.center-v.inner.bind-wide
+  position: fixed
+
+nav.inner
+  padding-top: 25px
+  padding-bottom: 20px
+  
+@media (min-width: 1200px)
+  nav.flex.center-v.inner.bind-wide
+    left: 50%
+    margin-left: -600px
+

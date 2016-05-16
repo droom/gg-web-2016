@@ -1,5 +1,14 @@
 $( document ).ready(function() {
 
+	$(".what").slick({
+		dots: true,
+		infinite: true,
+		// adaptiveHeight: true,
+		// adaptiveWidth: true,
+		fade: true,
+  // cssEase: 'linear'
+	});
+
 	$(".testimonials").slick({
 		dots: true,
 		infinite: true,
