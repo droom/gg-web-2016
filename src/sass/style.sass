@@ -18,8 +18,18 @@ $headlines:       $roboto
 $running: 		    $roboto
 $testimonials: 	  $roboto
 
-$app-buttons:     none
+$on:              rgba(0,0,0,0.6) 
+$off:             none
+// $static:          1px solid red
 
+$app-buttons:     block
+$nav-style:       relative
+$nav-bg:          $off
+// $logo:            $static
+
+
+@import "lib/slick.sass"
+// @import "lib/slick-theme.sass"
 
 @import "partials/reset.sass"
 @import "partials/type.sass"
@@ -29,6 +39,8 @@ $app-buttons:     none
 @import "partials/grid.sass"
 @import "partials/hero.sass"
 @import "partials/nav.sass"
+@import "partials/wordmark.sass"
+@import "partials/slider.sass"
 
 @import "sections/app.sass"
 @import "sections/steps.sass"
@@ -45,13 +57,3 @@ $app-buttons:     none
 @import "motion/app.sass"
 @import "motion/flip.sass"
 
-
-.wordmark
-  position: relative
-  height: 75px
-  
-  .flip,
-  .static
-    position: absolute
-    top: 0
-    left: 0

@@ -1,52 +1,51 @@
 section.use
-  ul.categories
-    > li:nth-child(1)::before
-      content: url('../img/icons/icon-use-1.png')
-    > li:nth-child(2)::before
-      content: url('../img/icons/icon-use-2.png')
-    > li:nth-child(3)::before
-      content: url('../img/icons/icon-use-3.png')
-    > li:nth-child(4)::before
-      content: url('../img/icons/icon-use-4.png')
-    > li:nth-child(5)::before
-      content: url('../img/icons/icon-use-5.png')
-
-
-section.benefits,
-section.use
-  ul.categories
-    > li::before
-      content: url('../img/icon-empty.jpg')
-      display: block
-      margin: 0 0 10px 0
-
-    > li
-      display: inline-block
-      width: calc(100%/5)
-      vertical-align: top
-      margin: auto
-      padding: 30px 20px 65px 20px
-
-      .examples
-        display: block
-        font-size: 13px
-        opacity: 0.6
+  .flex
+    min-height: 300px
+    .info
+      padding: 15px 10px
+      .second
+        transition: all 400ms ease
+        overflow: hidden
         margin-top: 10px
-        li
-          line-height: 1.7em
-          text-align: center
-          display: block
+        
+
+    .unit
+      width: 50%
+      .flex
+        .unit
           width: 100%
 
-@media (max-width: 900px)
-  section.use
-    ul.categories
-      > li
-        width: calc(100%/3)
+      hgroup
+        margin: 10px 0 0 0
+      ul li
+        line-height: 1.6em
+      ul li a:hover
+        color: $teal  
 
 
-@media (max-width: 550px)
-  section.use
-    ul.categories
-      > li
-        width: calc(100%/2)
+    .quad
+      .flex.stretch
+        transition: all 400ms ease
+        background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5))
+        opacity: 0.8
+
+
+    .quad:hover
+      .flex.stretch
+        transition: all 400ms ease
+        background: radial-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9))
+        opacity: 1
+
+
+    .quad1
+      background: url("../img/components/use/quad1.jpg") 50% 30%
+
+    .quad2
+      background:  url("../img/components/use/quad2.jpg") 50% 30%
+
+    .quad3
+      background:  url("../img/components/use/quad3.jpg") 40% 30%
+
+    .quad4
+      background:  url("../img/components/use/quad4.jpg") 100% 10%
+

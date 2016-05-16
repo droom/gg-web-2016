@@ -1,12 +1,13 @@
-section.video.center.dark
-  .controls.flex.wrap
-    .unit.top
-      h2 Introduction to GoGet
-    .unit.center
-      a(href="#")#play
-        img(src="img/buttons/play.png").btnVideo
-    .unit.bottom
-      small.info Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+section.video.center.inner
+  h2 Understand us more
 
-  video(width="100%" poster="components/video/poster.jpg")#movie
+  .controls.flex.wrap
+    .unit.center-v
+      a(href="#")#play
+        img(src="img/components/video/play.png").btnVideo
+  
+
+  video(width="100%" preload="none")#movie
     source(src="video/hello.mov" type="video/mp4")
+  
+  //- small.info Possible supporting copy here. Lorem ipsum dolor sit amet, consectetur adipisicing elit.

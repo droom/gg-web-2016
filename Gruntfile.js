@@ -14,6 +14,7 @@ module.exports = function(grunt) {
       sass: {
         files: [
         'src/sass/*.sass',
+        'src/sass/lib/*.sass',
         'src/sass/sections/*.sass',
         'src/sass/partials/*.sass',
         'src/sass/motion/*.sass'
@@ -42,7 +43,6 @@ module.exports = function(grunt) {
         'src/sass/partials/*.sass'
         ],
 
-
         tasks: ['postcss'],
       }
     },
@@ -53,9 +53,10 @@ module.exports = function(grunt) {
       },
       js: {
         src: [
-        'src/lib/jquery.min.js',
+        'src/lib/jquery-2.2.0.js',
         'src/lib/easing.js',
         'src/lib/noframework.waypoints.js',
+        'src/lib/slick.js',
         'src/js/*.js'
         ],
         dest: 'dist/js/main.min.js',

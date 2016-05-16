@@ -1,7 +1,6 @@
 body
   min-width: 320px
 
-
 section.contents,
 section.social,
 section.earn,
@@ -19,45 +18,47 @@ section,
 header,
 footer
   h2
-    padding: 30px 40px 10px 40px
+    padding: 30px 40px
+
+  h2 + .inner
+    padding-top: 10px
+
+  // h2 + video
+    // margin-top: 20px
+
+.bind,
+.bind-wide  
+  margin: auto
+.bind-wide  
+  max-width: $bind-wide
+.bind  
+  max-width: $bind-med
 
 .inner
-  padding: 30px 40px
+  padding: 40px 40px 40px 40px
   h2
     padding: 0
 
-.bind-wide  
-  max-width: $bind-wide
-  margin: auto
 
-.bind  
-  max-width: $bind-med
-  margin: auto
-
-
-@media (max-width: 500px)
-  h1, .h1,
-  h2, .h2, 
-  blockquote, .blockquote
-    font-weight: 200
-    font-size: 26px 
-    letter-spacing: 0.045em
-
+@media (max-width: 900px)
   section,
   footer
     h2
       background: rgba(255,255,255,0.04)
-      padding: 20px 30px 20px 30px
+      padding: 25px 35px 25px 35px
   .inner
-    padding: 15px 15px 30px 15px
+    padding: 25px 20px 35px 20px
     h2
       padding: 0
-
+      
 
 
 .flex
   width: 100%
   display: flex
+
+  &.stretch
+    align-items: stretch
 
   &.center-v
     align-items: center
@@ -75,6 +76,10 @@ footer
     &.stretch
       flex-grow: 1
     
+    &.wide
+      flex-basis: 100%
+      width: 100%
+
     &.top
       align-self: flex-start
     
@@ -84,6 +89,4 @@ footer
     &.bottom
       align-self: flex-end
 
-.flex + .flex
-  margin-top: 40px
 

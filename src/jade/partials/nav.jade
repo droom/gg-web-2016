@@ -1,19 +1,22 @@
 nav.flex.center-v
   .unit.top
-    .wordmark
-      .flip.delay500.no-select.turn
-        img(src="img/global/logo-roundel-mascot.png").first
-        img(src="img/global/logo-roundel-wordmark.png").second
-      
+
+    .wordmark-active.no-select
+      .flip.size70.delay500.turn
+        img(src="img/global/logo-roundel-mascot.png").first.no-drag
+        img(src="img/global/logo-roundel-wordmark.png").second.no-drag
       .static      
-        img(src="img/global/logo-wordmark.png").static
+        img(src="img/global/logo-wordmark.png").static.no-drag
+    .wordmark-static.no-select
+        img(src="img/global/logo-static.png").static.no-drag
+
 
   .unit.center-v
     ol
       li.cta
-        a(href="#").plain.caps Sign In
+        a(href="#").plain.caps Sign up
       li
-        a(href="#").plain.caps Sign Up
+        a(href="#").plain.caps Log in
       li 
         a(href="#").plain.caps FAQ
 

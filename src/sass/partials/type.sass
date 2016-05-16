@@ -2,8 +2,6 @@ body
   font-family: 'Roboto', sans-serif
   background: $copyDark
 
-h1
-  color: white
 
 h1, .h1,
 h2, .h2, 
@@ -12,12 +10,37 @@ blockquote, .blockquote
   font-size: 32px 
   letter-spacing: 0.045em
 
-h3, .h3
+@media (max-width: 900px)
+  h2, .h2, 
+  blockquote, .blockquote
+    font-weight: 200
+    font-size: 26px 
+    letter-spacing: 0.045em
+
+@media (max-width: 500px)
+  h2, .h2, 
+  blockquote, .blockquote
+    font-weight: 200
+    font-size: 26px 
+    letter-spacing: 0.045em
+
+
+h3, .h3,
+hgroup, .hgroup,
+cite, .cite
   font-size: 13px
   line-height: 1.445em
-  text-transform: uppercase
   font-weight: 400
   letter-spacing: 0.045em
+  display: block
+  text-transform: uppercase
+
+
+ol li,
+ul li
+  font-size: 13px
+  line-height: 1.445em
+
 
 dl
   font-size: $font-sm-pt
@@ -45,6 +68,9 @@ ul + p
   margin-top: 1.5em
   
 
+
+
+
 small .small, p .p, li .li
   font-size: 12px
   font-weight: 300
@@ -63,11 +89,13 @@ small .small, p .p, li .li
   text-transform: uppercase
   letter-spacing: 0.07em
 
-.shadow
-  filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.9))
-
 ::selection
   background-color: rgba( 0, 180, 173, 0.8)
   
 .no-select
   user-select: none
+
+.no-drag
+  user-drag: none
+
+

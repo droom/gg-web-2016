@@ -1,5 +1,36 @@
+.carousel
+  margin: 0
+  button.slick-prev.slick-arrow
+    display: none !important
+
+  .slick-dots
+    position: static
+    li
+      margin: 0 8px
+      button::before
+        font-size: 13px
+
+
+
+
 section.quote
+
+  .unit:nth-child(1),
+  .unit:nth-child(3)
+    flex-basis: 10%
+  .unit:nth-child(1)
+
+    text-align: left
+  
+  .unit:nth-child(3)
+    text-align: right
+  
+  .unit:nth-child(2)
+    flex-basis: 80%
+    padding: 0 30px 
+
   .unit
+
     blockquote
       &::before
         content: '“'
@@ -7,5 +38,11 @@ section.quote
         content: '”'
 
     cite
-      margin-top: 35px
+      margin-top: 20px
       display: block
+      text-align: center
+      font-style: normal
+
+  .face
+    img
+      padding: 0 0 30px 0

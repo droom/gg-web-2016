@@ -1,24 +1,25 @@
 section.steps.dark.center#steps
-  h2 How it works
+  h2 How we work
   ol.no-list.inner.bind
     li
-      .flip.no-select
+      .flip.size70.no-select
         img(src="img/components/step/step-1.png").first
         img(src="img/components/step/step-a-icon-75.png").second
-      h3.breathe Create a job
-      p Tell us what you need to get done.
+      hgroup Pick a task
+      = "Provide job details"
 
     li
-      .flip.delay250.no-select
+      .flip.size70.delay250.no-select
         img(src="img/components/step/step-2.png").first
         img(src="img/components/step/step-b-icon-75.png").second
           
-      h3.breathe GoGetter Claims
-      p A verified GoGetter will do the job!
+      hgroup Get a GoGetter
+      = "Recieve notification when a GoGetter claims your job"
+
 
     li
-      .flip.delay500.no-select
+      .flip.size70.delay500.no-select
         img(src="img/components/step/step-3.png").first
         img(src="img/components/step/step-c-icon-75.png").second
-      h3.breathe Pay cash on delivery
-      p Reward your GoGetter for helping you out.
+      hgroup Job Completed
+      = "Reward your GoGetter with fee you have set"

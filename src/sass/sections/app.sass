@@ -1,17 +1,128 @@
 section.mobile
-  background: #e7e7e7
-  overflow: hidden
-  height: 630px
   
-  // hr
-  //   margin: 30px 0
-  //   height: 1px
+  overflow: hidden
+  height: 680px
+  background: #e7e7e7
+  background: linear-gradient( 135deg, #fff 0% , #e7e7e7 100% )
+
+  .flex
+    .unit
+      width: 50%
+    
+    .details
+
+      .flex.big
+        height: 100%
+        flex-wrap: wrap
+        align-items: center
+
+        .unit
+          flex-basis: 100%
+          width: 100%
+
+      h2
+        padding-left: 0
+        padding-right: 0
+        max-width: 360px
+        margin: auto
+        width: 100%
+
+    .hello
+      transition: background 400ms ease
+
+  ul.app-benefits
+    max-width: 280px
+    margin: 40px auto 60px auto
+    
+    hgroup
+      font-weight: bold
+    
+    li
+      text-align: center
+
+    li + li
+      margin-top: 25px
+
+    li:nth-child(1)::before,
+    li:nth-child(2)::before,
+    li:nth-child(3)::before
+      display: block
+      margin: 0 0 6px 0
+    
+    li:nth-child(1)::before
+      content: url("../img/icons/icon-benefit-1.png")
+      
+    li:nth-child(2)::before
+      content: url("../img/icons/icon-benefit-2.png")
+    
+    li:nth-child(3)::before
+      content: url("../img/icons/icon-benefit-3.png")
+
+
+  .all
+    width: 100%
+    transform: rotate(10deg)
+    margin-top: -90px
+    
+
+    
+@media (max-width: 980px)
+  section.mobile
+    .details
+      .unit.bottom
+        img
+          zoom: 0.8
+    
+    .all
+      transform: rotate(0deg)
+      margin-top: -110px
+
+
+    .flex
+      .details,
+      .hello
+        background: none
+
+@media (max-width: 880px)
+  section.mobile
+    height: auto
+
+    .flex
+      .details
+      .hello
+        min-width: 350px
+      .unit
+        .flex.big
+          height: auto
+          
+      .unit:nth-child(1)
+      .unit:nth-child(2)
+
+    .all
+      transform: rotate(0deg)
+      zoom: 0.75
+      margin-top: 0
+      margin-left: 0
+
+@media (max-width: 800px)
+  section.mobile
+    .flex
+      .details
+        min-width: 400px
+      .hello
+        min-width: 350px
+
+
+@media (max-width: 500px)
+  section.mobile
+    background: #e7e7e7
+    .flex
+      .details
+        min-width: auto
+      .hello
+        display: none
 
 
 
 
 
-// @media (max-width: 550px)
-//   section.mobile
-//     .all
-//       display: none

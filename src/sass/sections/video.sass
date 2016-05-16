@@ -1,5 +1,6 @@
 section.video
   position: relative
+  background: #ccc
   
   .controls
     position: absolute
@@ -15,22 +16,28 @@ section.video
 
   video
     z-index: 1
+    background:  url('../img/components/video/poster.jpg') 50% 50%
+    width: 90%
+
     
+  h2,
+  .btnVideo
+    transition: $transition
 
-.btnVideo
-  transition: $transition
+  .hide
+    opacity: 0
 
-.btnVideo.hide
-  opacity: 0
 
 section.video:hover .controls .unit .btnVideo
   opacity: 1
 
+section.video:hover h2
+  opacity: 1
 
 
 @media (max-width: 600px)
   section.video
     h2
-      display: none
+      display: block
     small.info
-      display: none
+      display: block
