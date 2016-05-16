@@ -1,48 +1,43 @@
-.carousel
-  margin: 0
-  button.slick-prev.slick-arrow
-    display: none !important
-
-  .slick-dots
-    position: static
-    li
-      margin: 0 8px
-      button::before
-        font-size: 13px
-
-
-
-
 section.quote
 
-  .unit:nth-child(1),
-  .unit:nth-child(3)
-    flex-basis: 10%
-  .unit:nth-child(1)
+  .slick-slider
+    margin-bottom: 20px
+    
+    .slick-slide
+      outline: none
+      user-select: none
+    
+      blockquote
+        min-height: 3em
 
-    text-align: left
-  
-  .unit:nth-child(3)
-    text-align: right
-  
-  .unit:nth-child(2)
-    flex-basis: 80%
-    padding: 0 30px 
+      blockquote,
+      cite
+        color: white
+      
+      cite
+        margin: 10px 0
+        font-style: normal
 
-  .unit
+  .slider
+    width: 70%
+    margin: 20px auto 40px auto
+    
+  .slick-prev, .slick-next
+    opacity: 0.5
 
-    blockquote
-      &::before
-        content: '“'
-      &::after
-        content: '”'
+  .slick-prev,
+  [dir='rtl'] .slick-prev
+    left: -160px
+    right: auto
 
-    cite
-      margin-top: 20px
-      display: block
-      text-align: center
-      font-style: normal
+  .slick-next,
+  [dir='rtl'] .slick-next
+    right: -160px
+    left: auto
+    
+  .slick-arrow
+    padding: 40px
+    margin-top: -130px
 
-  .face
-    img
-      padding: 0 0 30px 0
+
+
