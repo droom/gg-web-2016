@@ -1,0 +1,66 @@
+section.quad
+  .flex
+    min-height: 300px
+    .info
+      padding: 15px 10px
+      .second
+        transition: all 400ms ease
+        overflow: hidden
+        
+        ul li:first-child
+          // background: pink
+          margin-bottom: 12px
+          
+    .unit
+      width: 50%
+      .flex
+        .unit
+          width: 100%
+
+      hgroup
+        margin: 10px 0 0 0
+      ul li
+        line-height: 1.6em
+      ul li a:hover
+        color: $teal  
+
+    .quad
+      .flex.stretch
+        transition: all 400ms ease
+        background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5))
+        opacity: 0.8
+
+    .quad:hover
+      .flex.stretch
+        transition: all 400ms ease
+        background: radial-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9))
+        opacity: 1
+
+    .quad-1
+      background: url("../img/components/quad/quad-1-800.jpg") 50% 30%
+
+    .quad-2
+      background:  url("../img/components/quad/quad-2-800.jpg") 50% 30%
+
+    .quad-3
+      background:  url("../img/components/quad/quad-3-800.jpg") 70% 38%
+
+    .quad-4
+      background:  url("../img/components/quad/quad-4-800.jpg") 50% 50%
+
+
+@media (max-width: 800px)
+  section.quad
+    .flex
+      .quad-1
+        background: url("../img/components/quad/quad-1-400.jpg") 50% 30%
+
+      .quad-2
+        background:  url("../img/components/quad/quad-2-400.jpg") 50% 30%
+
+      .quad-3
+        background:  url("../img/components/quad/quad-3-400.jpg") 40% 30%
+
+      .quad-4
+        background:  url("../img/components/quad/quad-4-400.jpg") 100% 10%
+

@@ -1,0 +1,123 @@
+nav
+  transition: $transition-slow
+  z-index: 999
+  margin: auto
+  width: 100%
+  position: fixed
+  top: 0
+  height: 130px
+  text-align: center
+
+
+  .flex.center-v.inner
+    position: fixed
+    padding-top: 30px
+    padding-bottom: 20px
+    transition: $transition-slow
+    margin: auto
+
+  .wordmark-static,
+  .wordmark-active
+    position: relative
+    height: 70px
+    transition: $transition-slow
+    transform-origin: 0 50%
+    
+    .word,   
+    .static,
+    .flip
+      position: absolute
+      top: 0
+      left: 0
+
+      img
+        height: 70px
+
+    .word
+      left: 10px
+      
+      img
+        position: absolute
+        top: 17px
+        left: 67px
+        height: 36px
+
+  .unit
+    width: 50%
+    transition: $transition
+  
+  .unit:nth-child(1)
+    text-align: left
+    .logo
+      transition: $transition
+      width: 130px
+      
+  .unit:nth-child(2)
+    text-align: right
+
+  ol li
+    display: inline
+    color: white
+    a
+      transition: $transition
+      border-radius: 3px
+      padding: 12px 13px 10px 13px
+      color: white
+      font-size: 12px
+      
+      &:hover
+        background: $white
+        color: $copyDark
+
+    & + li
+    margin-left: 15px
+
+    &.cta
+      a
+        background: $teal
+      a:hover
+        background: $white
+        color: $copyDark
+        
+
+
+
+
+@media (min-width: 1200px)
+  nav
+    .flex.center-v.inner
+      left: 50%
+      margin-left: -600px
+
+
+nav.small
+  height: 70px
+  background: rgba(0,0,0,0.3)
+  .flex.center-v.inner
+    padding-top: 0
+    padding-bottom: 0
+    .wordmark-active
+      transform: scale(0.65)
+      // margin-left: -40px
+      // left: -40px
+
+
+@media (max-width: 570px)
+  nav
+    .unit:nth-child(1)
+      flex-basis: 60%
+
+    .unit:nth-child(2)
+      flex-basis: 40%
+
+    ol li
+      text-align: center
+      display: block
+      margin-left: 0
+      
+      a
+        display: block
+      
+      & + li
+        margin-left: 0
+        margin-top: 5px
