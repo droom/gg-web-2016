@@ -1,32 +1,19 @@
 $( document ).ready(function() {
 
-	// if ( $('.steps').length ) {
-	// 	var waypoint1 = new Waypoint({
-	// 		element: document.getElementById('steps'),
-	// 		handler: function(direction) {
-	// 			$("#steps ol .flip").addClass('turn');
-	// 		}, offset: 300
-	// 	})
-	// };
-
-
 	if ( $('header.index').length ) {
 		var waypoint3 = new Waypoint({
-			element: document.getElementById('hero'),
-			handler: function(direction) {
+			element: document.getElementById('waypoint1'),
 
+			handler: function(direction) {
 				$("#nav").addClass('small');
 				$("#steps ol .flip").addClass('turn');
 				console.log("addClass");
 
 			}, offset: -400
 		})
-	}
 
-
-	if ( $('header.index').length ) {
 		var waypoint3 = new Waypoint({
-			element: document.getElementById('hero'),
+			element: document.getElementById('waypoint1'),
 			handler: function(direction) {
 
 				$("#nav").removeClass('small');

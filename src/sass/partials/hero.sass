@@ -1,4 +1,7 @@
 $offset: 60px
+$arrow-pad-btm  : 75px
+$arrow-pad-top  : 30px
+$arrow-pad-side : 60px
 
 header.index
   height: 95%
@@ -13,28 +16,21 @@ header.index
     text-align: center
     flex-wrap: wrap
 
-    // [dir='rtl'] .slick-prev,
     .slick-prev
       left:   0
-      // left:   6%
       right:  auto
-      padding: 30px 60px 75px 60px
+      padding: $arrow-pad-top $arrow-pad-side $arrow-pad-btm $arrow-pad-side
 
-    // [dir='rtl'] .slick-next,
     .slick-next
       right:   0
-      // right:   6%
       left:    auto
-      padding: 30px 60px 75px 60px
+      padding: $arrow-pad-top $arrow-pad-side $arrow-pad-btm $arrow-pad-side
 
     .slick-arrow
       margin-top: -48px
       z-index: 30
-        
 
-    .hero-1,
-    .hero-2,
-    .hero-3
+    .hero
       width: 100%
       height: 100%
       display: flex
@@ -42,34 +38,22 @@ header.index
       text-align: center
       
       .lockup
-        // outline: 1px solid red
-        // width: 100%
-        // margin: auto
         max-width: 80%
         margin: $offset auto 0 auto
 
-
-    .hero-1
-      background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-1800.jpg') 50% 40%
-
+      h1
+        color: white
+        z-index: 30
+        margin: auto
+        display: block
+        
+      h1 + a.button
+        margin-top: $offset
+      
     .hero-2
       display: none
-      background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-2-1800.jpg') 50% 40%
-
     .hero-3
       display: none
-      background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-3-1800.jpg') 50% 40%
-
-    h1
-      color: white
-      z-index: 30
-      margin: auto
-      display: block
-      // padding: 0 15px
-      
-    h1 + a.button
-      margin-top: $offset
-    
 
     .slick-list,
     .slick-track,
@@ -79,27 +63,16 @@ header.index
       display: flex
 
 
-    // .slick-list
-    //   height: 100%
-    //   width: 100%
-    //   display: flex
-    //   align-items: center
-    //   text-align: center
-      
-    //   .slick-track
-    //     height: 100%
-    //     width: 100%
-    //     display: flex
-    //     align-items: center
-    //     text-align: center        
 
-    //     .slick-slide
-    //       height: 100%
-    //       width: 100%
-    //       display: flex
-    //       align-items: center
-    //       text-align: center
 
+header.index
+  .index-hero.slider
+    .hero-1
+      background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-1800.jpg') 50% 40%
+    .hero-2
+      background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-2-1800.jpg') 50% 40%
+    .hero-3
+      background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-3-1800.jpg') 50% 40%
 
 
 @media (max-width: 1400px)
