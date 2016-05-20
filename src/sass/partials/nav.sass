@@ -11,8 +11,8 @@ nav
 
   .flex.center-v.inner
     position: fixed
-    padding-top: 30px
-    padding-bottom: 20px
+    padding-top: 25px
+    padding-bottom: 25px
     transition: $transition-slow
     margin: auto
 
@@ -82,14 +82,6 @@ nav
 
 
 
-
-@media (min-width: 1200px)
-  nav
-    .flex.center-v.inner
-      left: 50%
-      margin-left: -600px
-
-
 nav.small
   height: 70px
   background: rgba(0,0,0,0.3)
@@ -98,8 +90,18 @@ nav.small
     padding-bottom: 0
     .wordmark-active
       transform: scale(0.65)
-      // margin-left: -40px
-      // left: -40px
+
+
+
+
+
+
+
+@media (min-width: 1200px)
+  nav
+    .flex.center-v.inner
+      left: 50%
+      margin-left: -600px
 
 
 @media (max-width: 570px)

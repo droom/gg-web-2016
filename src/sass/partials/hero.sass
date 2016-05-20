@@ -1,3 +1,5 @@
+$offset: 60px
+
 header.index
   height: 95%
   background: #666
@@ -11,21 +13,25 @@ header.index
     text-align: center
     flex-wrap: wrap
 
-    .slick-prev,
-    [dir='rtl'] .slick-prev
-      left: 50px
-      right: auto
+    // [dir='rtl'] .slick-prev,
+    .slick-prev
+      left:   0
+      // left:   6%
+      right:  auto
+      padding: 30px 60px 75px 60px
 
-    .slick-next,
-    [dir='rtl'] .slick-next
-      right: 50px
-      left: auto
-      
+    // [dir='rtl'] .slick-next,
+    .slick-next
+      right:   0
+      // right:   6%
+      left:    auto
+      padding: 30px 60px 75px 60px
+
     .slick-arrow
       margin-top: -48px
       z-index: 30
-      padding: 40px 40px 80px 40px
-  
+        
+
     .hero-1,
     .hero-2,
     .hero-3
@@ -34,6 +40,14 @@ header.index
       display: flex
       align-items: center
       text-align: center
+      
+      .lockup
+        // outline: 1px solid red
+        // width: 100%
+        // margin: auto
+        max-width: 80%
+        margin: $offset auto 0 auto
+
 
     .hero-1
       background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-1800.jpg') 50% 40%
@@ -51,36 +65,40 @@ header.index
       z-index: 30
       margin: auto
       display: block
-      text-shadow: 2px 2px 18px rgba(0,0,0,.6)
+      // padding: 0 15px
       
-    h1::before
-      content: "Convenience  at your fingertips"
-      display: block
-      font-size: 13px
-      padding: 0 0 15px 0
-      font-weight: 300
+    h1 + a.button
+      margin-top: $offset
+    
 
-
-    .slick-list
+    .slick-list,
+    .slick-track,
+    .slick-slide
       height: 100%
       width: 100%
       display: flex
-      align-items: center
-      text-align: center
-      
-      .slick-track
-        height: 100%
-        width: 100%
-        display: flex
-        align-items: center
-        text-align: center        
 
-        .slick-slide
-          height: 100%
-          width: 100%
-          display: flex
-          align-items: center
-          text-align: center
+
+    // .slick-list
+    //   height: 100%
+    //   width: 100%
+    //   display: flex
+    //   align-items: center
+    //   text-align: center
+      
+    //   .slick-track
+    //     height: 100%
+    //     width: 100%
+    //     display: flex
+    //     align-items: center
+    //     text-align: center        
+
+    //     .slick-slide
+    //       height: 100%
+    //       width: 100%
+    //       display: flex
+    //       align-items: center
+    //       text-align: center
 
 
 
