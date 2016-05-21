@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 	if ( $('header.index').length ) {
 		var waypoint3 = new Waypoint({
-			element: document.getElementById('waypoint1'),
+			element: document.getElementById('waypoint-1'),
 
 			handler: function(direction) {
 				$("#nav").addClass('small');
@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		})
 
 		var waypoint3 = new Waypoint({
-			element: document.getElementById('waypoint1'),
+			element: document.getElementById('waypoint-1'),
 			handler: function(direction) {
 
 				$("#nav").removeClass('small');

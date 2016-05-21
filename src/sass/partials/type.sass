@@ -9,27 +9,45 @@ body
   background: $copyDark
 
 h1, .h1
-  font-weight: 400
-  font-size: 40px 
-  font-family: 'DINCondensed-Bold'
-  font-size: 66px
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.25)
-  text-transform: uppercase
-  letter-spacing: 0.035em
+  // font-weight: 400
+  // font-size: 40px
+  // font-family: 'DINCondensed-Bold'
+  // font-family: $roboto
+  // font-size: 66px
+  // text-shadow: 2px 2px 7px rgba(0,0,0,0.25)
+  // text-transform: uppercase
+  // letter-spacing: 0.035em
+  letter-spacing: 0.02em
   line-height: 0.95em
   text-rendering: optimizeLegibility
+  font-weight: 700
+  font-size: 50px
+  font-family: Helvetica, arial
 
-h1::before
-  content: "Convenience at your fingertips"
+small
+  font-weight: 400
+  // font-size: 40px 
+  // font-family: 'DINCondensed-Bold'
+  // font-size: 66px
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.25)
+  text-transform: uppercase
+  // letter-spacing: 0.035em
+  letter-spacing: 0.15em
+  
+  line-height: 0.95em
+  // text-rendering: optimizeLegibility
+  // content: "Convenience at your fingertips"
   display: block
   font-size: 13px
   font-weight: 400
   font-family: $roboto
+  color: white
+  margin: 20px 0
 
 
 h2, .h2, 
 blockquote, .blockquote
-  font-weight: 200
+  font-weight: 300
   font-size: 26px 
   letter-spacing: 0.03em
 
@@ -38,7 +56,7 @@ hgroup, .hgroup,
 cite, .cite
   font-size: 13px
   line-height: 1.445em
-  font-weight: 400
+  font-weight: 300
   letter-spacing: 0.045em
   display: block
   text-transform: uppercase
@@ -47,7 +65,9 @@ ol li,
 ul li
   font-size: 13px
   line-height: 1.445em
-
+  letter-spacing: 0.04em
+  font-weight: 300
+  
 dl
   font-size: $font-sm-pt
   line-height: $font-sm-ld
@@ -74,13 +94,10 @@ ul + p
   margin-top: 1.5em
   
 
-
-
-
-small .small, p .p, li .li
-  font-size: 12px
-  font-weight: 300
-  line-height: 1.4em
+// small .small, p .p, li .li
+//   font-size: 12px
+//   font-weight: 300
+//   line-height: 1.4em
 
 .reset li
   list-style: none

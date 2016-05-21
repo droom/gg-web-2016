@@ -1,15 +1,8 @@
 nav#nav
   .flex.center-v.inner.bind-wide
     .unit.top.left
-      .wordmark-active.no-select
-        .flip.size70.delay750.turn
-          img(src="img/global/logo-roundel-mascot-clean.svg").first.no-drag
-          img(src="img/global/logo-roundel-wordmark-clean.svg").second.no-drag
-        .word
-          img(src="img/global/logo-wordmark-clean.svg").no-drag
-        //- .static
-          img(src="img/global/logo-static.svg").static.no-drag
-
+      include _wordmark-inline
+      //- include _wordmark-link
 
     .unit.center-v
       ol
