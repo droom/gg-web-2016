@@ -9,57 +9,38 @@ body
   background: $copyDark
 
 h1, .h1
-  // font-weight: 400
-  // font-size: 40px
-  // font-family: 'DINCondensed-Bold'
-  // font-family: $roboto
-  // font-size: 66px
-  // text-shadow: 2px 2px 7px rgba(0,0,0,0.25)
-  // text-transform: uppercase
-  // letter-spacing: 0.035em
   letter-spacing: 0.02em
   line-height: 0.95em
   text-rendering: optimizeLegibility
   font-weight: 700
   font-size: 50px
-  font-family: Helvetica, arial
-
-small
-  font-weight: 400
-  // font-size: 40px 
-  // font-family: 'DINCondensed-Bold'
-  // font-size: 66px
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.25)
-  text-transform: uppercase
-  // letter-spacing: 0.035em
-  letter-spacing: 0.15em
-  
-  line-height: 0.95em
-  // text-rendering: optimizeLegibility
-  // content: "Convenience at your fingertips"
-  display: block
-  font-size: 13px
-  font-weight: 400
   font-family: $roboto
-  color: white
-  margin: 20px 0
-
 
 h2, .h2, 
 blockquote, .blockquote
   font-weight: 300
   font-size: 26px 
   letter-spacing: 0.03em
+  line-height: 1.2em
 
-h3, .h3,
-hgroup, .hgroup,
-cite, .cite
-  font-size: 13px
-  line-height: 1.445em
+
+h3, .h3, 
   font-weight: 300
-  letter-spacing: 0.045em
-  display: block
+  font-size: 16px 
+  letter-spacing: 0.06em
+  line-height: 1.2em
+
+
+
+hgroup,
+cite
   text-transform: uppercase
+  letter-spacing: 0.15em
+  line-height: 0.95em
+  display: block
+  font-size: 1em
+  font-weight: 400
+  font-family: $roboto
 
 ol li,
 ul li
@@ -80,6 +61,10 @@ dl dt
   display: inline-block
   min-width: 90px
 
+hgroup + h3,
+hgroup + p
+  margin-top: 5px
+
 dl + p
   margin-top: 3em
 
@@ -94,10 +79,9 @@ ul + p
   margin-top: 1.5em
   
 
-// small .small, p .p, li .li
-//   font-size: 12px
-//   font-weight: 300
-//   line-height: 1.4em
+
+
+
 
 .reset li
   list-style: none
