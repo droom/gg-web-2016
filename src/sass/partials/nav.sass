@@ -1,5 +1,5 @@
 nav
-  transition: $transition-slow
+  transition: $transition-med
   z-index: 999
   margin: auto
   width: 100%
@@ -12,14 +12,14 @@ nav
     position: fixed
     padding-top: 25px
     padding-bottom: 25px
-    transition: $transition-slow
+    transition: $transition-med
     margin: auto
 
   .wordmark-static,
   .wordmark-active
     position: relative
     height: 70px
-    transition: $transition-slow
+    transition: $transition-med
     transform-origin: 0 50%
     
     .word,   
@@ -45,12 +45,12 @@ nav
 
   .unit
     width: 50%
-    transition: $transition
+    transition: $transition-med
   
   .unit:nth-child(1)
     text-align: left
     .logo
-      transition: $transition
+      transition: $transition-med
       width: 130px
       
   .unit:nth-child(2)
@@ -60,7 +60,7 @@ nav
     display: inline
     color: white
     a
-      transition: $transition
+      transition: $transition-med
       border-radius: 3px
       padding: 12px 13px 10px 13px
       color: white
@@ -83,7 +83,9 @@ nav
 
 nav.small
   height: 70px
-  background: rgba(0,0,0,0.3)
+  // background: rgba(0,0,0,0.3)
+  background: rgba(35,35,35,0.4)
+  
   .flex.center-v.inner
     padding-top: 0
     padding-bottom: 0
@@ -94,7 +96,6 @@ nav.small
 @media (max-width: 570px)
   nav
     height: 70px
-    // background: rgba(0,0,0,0.3)
     .flex.center-v.inner
       padding-top: 0
       padding-bottom: 0

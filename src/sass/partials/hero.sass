@@ -66,6 +66,7 @@ header.index
       display: flex
 
 
+
 header.index
   .index-hero.slider
     .hero-1
@@ -80,6 +81,10 @@ header.index
   header.index
     max-height: 900px
     .index-hero.slider
+      .hero
+        h1
+          // background: blue
+
       .hero-1
         background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-1400.jpg') 50% 0%
       .hero-2
@@ -92,9 +97,53 @@ header.index
   header.index
     max-height: 650px
     .index-hero.slider
+      .hero
+        h1
+          letter-spacing: 0.02em
+          line-height: 0.95em
+          font-weight: 500
+          font-size: 45px
+          font-family: $roboto
+          max-width: 500px
+
       .hero-1
         background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-1000.jpg') 9% 40%
       .hero-2
         background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-2-1000.jpg') 50% 40%
       .hero-3
         background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-3-1000.jpg') 50% 40%
+        
+
+
+@media (max-width: 800px)
+  header.index
+    max-height: 650px
+    .index-hero.slider
+
+      .slick-arrow
+        margin-top: 182px
+        outline: 1px solid red
+        padding: 0
+                
+      .slick-prev
+        left: 30%
+        
+      .slick-next
+        right: 30%
+
+      .hero
+        h1
+          letter-spacing: 0.02em
+          line-height: 0.95em
+          font-weight: 500
+          font-size: 45px
+          font-family: $roboto
+          max-width: 500px
+
+      .hero-1
+        background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-1000.jpg') 9% 40%
+      .hero-2
+        background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-2-1000.jpg') 50% 40%
+      .hero-3
+        background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-3-1000.jpg') 50% 40%
+        

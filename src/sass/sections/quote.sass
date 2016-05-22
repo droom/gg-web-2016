@@ -1,63 +1,80 @@
-.slider-nav
-  text-align: center
-  margin: 40px 0 0 0
-  a + a
-    margin-left: 12px
-  a
-    width: 10px
-    height: 10px
-    display: inline-block
-    background: white
-    overflow: hidden
-    text-indent: -9999px
-    border-radius: 50%
-    opacity: 0.5
-    
-    &.active
-      opacity: 1
-
+#profile-1,
+#profile-2
+  user-drag: none 
+  user-select: none
+  pointer-events: none
 
 
 section.quote
+  .testimonials-img
+    .profile
+      width: 160px
 
-  .slick-slider
-    margin-bottom: 20px
+  .testimonials
+    outline: 1px solid pink
+    width: 100%
     
+    .slick-list.draggable
+      margin-top: -160px
+      padding-top: 160px
+
+    .slick-dots
+      bottom: 0
+
     .slick-slide
       outline: none
       user-select: none
     
       blockquote
-        min-height: 3em
-
-      blockquote,
-      cite
-        color: white
+        min-height: 7em
+        font-size: 20px
+        line-height: 1.25em
+        letter-spacing: 0.05em
+        padding: 20px 15px
       
       cite
         margin: 10px 0
         font-style: normal
 
-  .slider
-    width: 70%
-    margin: 20px auto 40px auto
-    
-  .slick-prev, .slick-next
-    opacity: 0.5
 
-  .slick-prev,
-  [dir='rtl'] .slick-prev
-    left: -160px
-    right: auto
+@media (max-width: 700px)
+  section.quote
 
-  .slick-next,
-  [dir='rtl'] .slick-next
-    right: -160px
-    left: auto
-    
-  .slick-arrow
-    padding: 40px
-    margin-top: -130px
+    #profile-turn
+      display: block
+
+    #profile-row
+      display: none
+
+    .testimonials
+      .slick-slide
+        blockquote
+          min-height: auto
+        cite
+          margin: 10px 0 50px 0
 
 
+@media (min-width: 701px)
+  section.quote
+    #profile-turn
+      display: none
 
+    #profile-row
+      display: flex
+      
+    .testimonials-img
+      .profile
+        width: 140px
+
+    .testimonials
+      .slick-slide
+        blockquote
+          font-weight: 300
+          font-size: 1.1rem
+          letter-spacing: 0.08rem
+          line-height: 1.395rem
+          padding: 10px 21px
+
+      .slick-list.draggable
+        margin-top:  0
+        padding-top: 0
