@@ -1,16 +1,12 @@
 section.steps
   ol.flex
     li
-      outline: 1px solid red
       hgroup
         margin: 10px 0
-
       h3
         padding: 0 25px
-      
       &:nth-child(2)
         margin: 0 30px
-
       &:nth-child(2),
       &:nth-child(3)
         &::before
@@ -19,15 +15,12 @@ section.steps
           margin: 20px 0 0 -30px
 
 
-
 @media (max-width: 800px) and (min-width: 601px)
   section.steps
     ol.flex
       li
-
         hgroup
           margin: 10px 0 5px 0
-
         h3
           font-size: 13px
           line-height: 1.38em
@@ -40,28 +33,17 @@ section.steps
   section.steps
     ol.flex
       display: block
-
       li
-        outline: 1px solid red
-        flex-basis: 100%
-        width: 100%
-        flex-grow: 1
-        flex: none
-        
         hgroup
           margin: 7px 0 5px 0
-        
         h3
           max-width: 300px
           margin: auto
-
         &:nth-child(2)
           margin: 0
-        
         &:nth-child(2),
         &:nth-child(3)
           margin-top: 30px
-          
           &::before
             content: ''
             float: left
