@@ -6,13 +6,11 @@ $arrow-pad-side : 60px
 .appset
   width: 100%
   line-height: 0
-  height: 70px
-  margin-top: -70px
   display: block
   position: absolute
-  padding: 14px 0
-  height: 100px
-  margin-top: -100px
+  padding: 15px 0
+  height: 70px
+  margin-top: -70px
  
   .app + .app
     margin-left: 15px
@@ -45,7 +43,7 @@ header.index
       padding: $arrow-pad-top $arrow-pad-side $arrow-pad-btm $arrow-pad-side
 
     .slick-arrow
-      margin-top: -48px
+      margin-top: -65px
       z-index: 30
 
     .hero
@@ -133,26 +131,24 @@ header.index
         
 
 
-@media (max-width: 800px)
+@media (max-width: 750px)
   header.index
     max-height: 650px
     .index-hero.slider
-
       .slick-arrow
-        margin-top: 182px
-        outline: 1px solid red
+        margin-top: 150px
         padding: 0
                 
       .slick-prev
-        left: 30%
+        left: 40%
         
       .slick-next
-        right: 30%
+        right: 40%
 
       .hero
         h1
           letter-spacing: 0.02em
-          line-height: 0.95em
+          line-height: 0.98em
           font-weight: 500
           font-size: 45px
           font-family: $roboto
@@ -169,3 +165,35 @@ header.index
       .hero-3
         background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-3-1000.jpg') 50% 40%
         
+
+
+@media (max-width: 570px)
+  header.index
+    max-height: 570px
+    
+    .index-hero.slider
+      .slick-arrow
+        margin-top: 170px
+        padding: 0
+        zoom: 0.8
+                
+      .slick-prev
+        left: 40%
+        
+      .slick-next
+        right: 40%
+
+      .hero
+        .lockup
+          max-width: 80%
+          margin: -50px auto 0 auto
+
+      .hero-1
+        background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-1-570.jpg') 9% 40%
+      .hero-2
+        background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-2-570.jpg') 50% 40%
+      .hero-3
+        background: radial-gradient(transparent, rgba(0,0,0,0.4)), url('../img/components/hero/hero-3-570.jpg') 50% 40%
+        
+
+
