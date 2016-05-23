@@ -5,6 +5,7 @@ html, body
 body
   min-width: 320px
 
+
 section.contents,
 section.social,
 section.earn,
@@ -18,14 +19,27 @@ footer
   width: 100%
   margin: auto
 
+
+
 section,
 header,
 footer
   h2
-    padding: 30px 40px
+    padding: 30px
 
-  h2 + .inner
-    padding-top: 10px
+@media (max-width: 600px)
+  section,
+  footer
+    h2
+      padding: 17px 0 15px 0 
+      font-size: 22px
+      background: rgba(255,255,255,0.04)
+
+  section.light
+    h2
+      background: rgba(0,0,0,0.04)
+
+
 
 .bind,
 .bind-wide  
@@ -34,24 +48,14 @@ footer
   max-width: $bind-wide
 .bind  
   max-width: $bind-med
+  
 
 .inner
   padding: 40px 40px 45px 40px
-  h2
-    padding: 0
+  & + .inner
+    padding-top: 0
 
 
-@media (max-width: 900px)
-  section,
-  footer
-    h2
-      // background: rgba(255,255,255,0.04)
-      padding: 15px 35px 15px 35px
-      // margin-bottom: 20px
-
-
-      
+@media (max-width: 600px)
   .inner
-    padding: 25px 20px 35px 20px
-    h2
-      padding: 0
+    padding: 20px 20px 25px 20px

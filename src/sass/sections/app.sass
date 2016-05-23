@@ -1,14 +1,15 @@
 section.mobile
   overflow: hidden
   height: 600px
-
   .flex
-    max-width: $bind-med + 40px
+    max-width: $bind-med
     height: 600px
     margin: auto
     .unit
       width: 50%
-      
+      .app-buttons
+        padding: 20px 0
+
     .details
       .flex
         .unit
@@ -21,7 +22,13 @@ section.mobile
 
   ul.app-benefits
     max-width: 280px
-    margin: 20px auto 40px auto
+    margin: auto
+    padding: 20px 0 30px 0
+    
+    p
+      // background: pink
+      max-width: 240px
+      margin: 0 auto
     
     li
       text-align: center
@@ -33,7 +40,7 @@ section.mobile
     li:nth-child(2)::before,
     li:nth-child(3)::before
       display: block
-      margin: 0 auto
+      margin: 0 auto -6px auto
       height: 70px
       width: 70px
       
@@ -68,7 +75,7 @@ section.mobile
 
     .flex
       .details,
-      .hello
+      .iphone
         background: none
 
 
@@ -78,15 +85,18 @@ section.mobile
     .flex
       .details
         min-width: 400px
-      .hello
+      .iphone
         min-width: 350px
 
 
 @media (max-width: 500px)
   section.mobile
     background: #e7e7e7
+    height: auto
     .flex
+      height: auto
+
       .details
         min-width: auto
-      .hello
+      .iphone
         display: none

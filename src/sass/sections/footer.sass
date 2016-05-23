@@ -8,8 +8,26 @@ footer
     letter-spacing: 0.075em
     font-weight: 300
 
-  small.legal
+  .legal
     opacity: 0.6
-    display: block
-    margin-top: 50px
 
+@media (max-width: 450px)
+  footer
+
+    .contents
+      display: block
+      
+      ul li
+        line-height: 1.8em
+
+    .social
+      margin-top: 25px
+      text-align: center !important
+      
+      a + a
+        margin-left: 15px
+
+    .legal
+      margin-top: 0
+      padding-top: 0
+      text-align: center !important
