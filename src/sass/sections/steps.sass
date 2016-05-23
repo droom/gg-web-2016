@@ -1,84 +1,68 @@
 section.steps
-  ol
+  ol.flex
     li
-      display: inline-block
-      width: calc(78%/3)
-      vertical-align: top
-      text-align: center
-      color: white
-      padding: 0 10px
-      // margin: auto
-      
-      .flip
-        margin: auto
-
+      outline: 1px solid red
       hgroup
-        margin: 15px 0 10px
-      
-      h3
-        margin: 10px auto
-        max-width: 185px
-        // outline: 1px solid red
-
-    li:nth-child(2)
-      margin-left: 10%
-      margin-right: 10%
-      position: relative
-
-    li:nth-child(2)::before,
-    li:nth-child(2)::after
-      background-image:     url('../img/icons/step-right.svg') 
-      background-repeat:    no-repeat 
-      background-position:  50% 15%
-      background-size:      30px
-      
-      content: ""
-      width: 37%
-      display: block
-      height: 100%
-      position: absolute
-      top: 0
-    li:nth-child(2)::before
-      left: -37%
-    li:nth-child(2)::after
-      right: -37%
-
-
-@media (max-width: 500px)
-  section.steps
-    ol
-      li
-        display: block
-        width: 100%
-        vertical-align: top
-        text-align: center
-        color: white
-        p
-          max-width: 100%
-        h3
-          font-size: 16px
-          margin: 12px 0 1px 0
-
-      li:nth-child(2)
-        margin: 0
-        position: relative
-
-      li:nth-child(2)::before,
-      li:nth-child(2)::after
-        background:     url('../img/icons/step-down.svg') 
-        background-repeat:    no-repeat 
-        background-position:  50% 50%
-        background-size:      30px
-
-        content: ""
-        width: 100%
-        display: block
-        height: 50px
         margin: 10px 0
+
+      h3
+        padding: 0 25px
+      
+      &:nth-child(2)
+        margin: 0 30px
+
+      &:nth-child(2),
+      &:nth-child(3)
+        &::before
+          content: url('../img/icons/step-right.svg')
+          float: left
+          margin: 20px 0 0 -30px
+
+
+
+@media (max-width: 800px) and (min-width: 601px)
+  section.steps
+    ol.flex
+      li
+
+        hgroup
+          margin: 10px 0 5px 0
+
+        h3
+          font-size: 13px
+          line-height: 1.38em
+          letter-spacing: 0.05em
+          font-weight: 300
+          padding: 0
+
+
+@media (max-width: 600px)
+  section.steps
+    ol.flex
+      display: block
+
+      li
+        outline: 1px solid red
+        flex-basis: 100%
         width: 100%
-        position: relative
+        flex-grow: 1
+        flex: none
         
-      li:nth-child(2)::before
-        left: 0
-      li:nth-child(2)::after
-        right: 0
+        hgroup
+          margin: 7px 0 5px 0
+        
+        h3
+          max-width: 300px
+          margin: auto
+
+        &:nth-child(2)
+          margin: 0
+        
+        &:nth-child(2),
+        &:nth-child(3)
+          margin-top: 30px
+          
+          &::before
+            content: ''
+            float: left
+            margin: 0

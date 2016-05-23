@@ -1,9 +1,6 @@
 a
   transition: $transition-med
 
-  &.app img
-    border-radius: 4px
-
   &.inline-block
     display: inline-block
 
@@ -52,8 +49,13 @@ a
     line-height: $font-sm-ld
     padding: 15px
 
+
   &.app + a.app
     margin-left: 6px
+
+  &.app 
+    img
+      border-radius: 4px
 
   &.arrow
     opacity: 0.6
