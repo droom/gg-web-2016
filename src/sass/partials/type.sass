@@ -1,33 +1,44 @@
-// @font-face
-//   font-family: 'DINCondensed-Bold'
-//   src: url('../fonts/DINCondensed-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/DINCondensed-Bold.otf')  format('opentype'), url('../fonts/DINCondensed-Bold.woff') format('woff'), url('../fonts/DINCondensed-Bold.ttf')  format('truetype'), url('../fonts/DINCondensed-Bold.svg#din-alt') format('svg')
-//   font-weight: normal
-//   font-style: normal
-
 body
   font-family: 'Roboto', sans-serif
-  background: $copyDark
-
-h1, .h1
-  letter-spacing: 0.02em
-  line-height: 0.95em
-  text-rendering: optimizeLegibility
-  font-weight: 500
-  font-size: 60px
   font-family: $roboto
+  background: $copyDark
+  text-rendering: optimizeLegibility
 
-h2, .h2, 
-blockquote, .blockquote
+h1
+  font-size: 3.5rem
+  line-height: 3.25rem
+  letter-spacing: 0.015rem
+  font-weight: 500
+
+
+@media (max-width: 750px)
+  h1
+    font-size: 2.5rem
+    line-height: 2.6rem
+    letter-spacing: 0.015rem
+    font-weight: 500
+
+@media (max-width: 570px)
+  h1
+    font-size: 2rem
+    line-height: 2rem
+    letter-spacing: 0.015rem
+    font-weight: 500
+
+
+
+h2,
+blockquote
   font-weight: 300
   font-size: 26px 
   letter-spacing: 0.03em
   line-height: 1.2em
 
-h3, .h3, 
+h3, 
   font-weight: 300
-  font-size: 1.1rem
-  letter-spacing: 0.08rem
-  line-height: 1.395rem
+  font-size: 1rem
+  letter-spacing: 0.075rem
+  line-height: 1.3rem
 
 hgroup,
 cite
@@ -47,6 +58,7 @@ ul li
   letter-spacing: 0.04em
   font-weight: 300
   
+  
 dl
   font-size: $font-sm-pt
   line-height: $font-sm-ld
@@ -59,16 +71,14 @@ dl dt
   display: inline-block
   min-width: 90px
 
-// hgroup + p,
-hgroup + h3
-  margin-top: 5px
+
+
 
 dl + p
   margin-top: 3em
 
 p + p
   margin-top: 1em
-
 
 p + ul
   margin-top: 1.5em
@@ -78,6 +88,8 @@ ul + p
   
 
 
+hgroup + h3
+  margin-top: 5px
 
 
 

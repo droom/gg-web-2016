@@ -1,5 +1,6 @@
 a
-  transition: $transition-med
+  // transition: $transition-med
+  transition: background 300ms ease 
 
   &.inline-block
     display: inline-block
@@ -43,12 +44,10 @@ a
     &:hover
       background: $white
 
-
   &.small
     font-size: $font-sm-pt
     line-height: $font-sm-ld
     padding: 15px
-
 
   &.app + a.app
     margin-left: 6px
@@ -69,3 +68,16 @@ a
       margin-left: -20px
     &.right
       margin-right: -20px
+
+
+@media (max-width: 570px)
+  a.button
+    font-size: $font-sm-pt
+    line-height: $font-sm-ld
+    padding: 13px 15px
+
+    &:hover
+      background: $teal
+      
+
+

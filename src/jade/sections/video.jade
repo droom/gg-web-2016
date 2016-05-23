@@ -1,11 +1,6 @@
 section.video.center.light
   h2 Let us help you with
   
-  .controls.flex.wrap
-    .unit.center-v
-      a(href="#")#play
-        img(src="img/components/video/play.png").btnVideo
-  
-  video(width="100%" preload="none" poster="img/components/video/poster.png")#movie
+  video(width="100%" controls)#movie
     source(src="video/hello.mov" type="video/mp4")
   

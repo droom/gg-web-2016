@@ -1,121 +1,194 @@
 nav
-  transition: $transition-med
   z-index: 999
   margin: auto
   width: 100%
   position: fixed
-  top: 0
-  height: 130px
-  text-align: center
 
   .flex.center-v.inner
-    position: fixed
-    padding-top: 25px
-    padding-bottom: 25px
-    transition: $transition-med
-    margin: auto
+    .unit:nth-child(1)
+      text-align: left
+      width: 30%
 
-  .wordmark-static,
-  .wordmark-active
-    position: relative
-    height: 70px
-    transition: $transition-med
-    transform-origin: 0 50%
-    
-    .word,   
-    .static,
-    .flip
-      position: absolute
-      top: 0
-      left: 0
-      
-      svg,
-      img
-        height: 70px
+    .unit:nth-child(2)
+      text-align: right
+      width: 70%
 
-    .word
-      left: 10px
-      
-      svg,
-      img
-        position: absolute
-        top: 17px
-        left: 67px
-        height: 36px
+    .unit
+      ol li
+        display: inline
+        color: white
+        transition: all 300ms ease
 
-  .unit
-    width: 50%
-    transition: $transition-med
-  
-  .unit:nth-child(1)
-    text-align: left
-    .logo
-      transition: $transition-med
-      width: 130px
-      
-  .unit:nth-child(2)
-    text-align: right
-
-  ol li
-    display: inline
-    color: white
-    a
-      transition: $transition-med
-      border-radius: 3px
-      padding: 12px 13px 10px 13px
-      color: white
-      font-size: 12px
-      
-      &:hover
-        background: $white
-        color: $copyDark
-
-    & + li
-    margin-left: 15px
-
-    &.cta
-      a
-        background: $teal
-      a:hover
-        background: $white
-        color: $copyDark
-        
-
-nav.small
-  height: 70px
-  background: rgba(35,35,35,0.4)
-  
-  .flex.center-v.inner
-    padding-top: 0
-    padding-bottom: 0
-    .wordmark-active
-      transform: scale(0.6)
-
-
-@media (max-width: 570px)
-  nav
-    height: 70px
-    background: rgba(35,35,35,0.4)
-    
-    .flex.center-v.inner
-      padding-top: 0
-      padding-bottom: 0
-      .wordmark-active
-        transform: scale(0.6)
-    ol
-      li
-        margin: 0
         a
-          margin: 0
-          font-size: 11px
+          border-radius: 3px
+          padding: 12px 13px 10px 13px
+          color: white
+          font-size: 12px
+          
+          &:hover
+            background: $white
+            color: $copyDark
 
-      li:nth-child(3)
-        display: none
+        & + li
+        margin-left: 15px
 
+        &.cta
+          a
+            background: $teal
+          a:hover
+            background: $white
+            color: $copyDark
+
+
+      .wordmark-static,
+      .wordmark-active
+        position: relative
+        height: 70px
+        width: 70px
+        transform-origin: 50% 50%
+
+        .word,   
+        .static,
+        .flip
+          position: absolute
+          top: 0
+          left: 0
+          height: 70px
+          width: 70px
+
+          svg,
+          img
+            height: 70px
+            width: 70px
+          
+        .word
+          left: 0
+          top: 0
+          
+          svg,
+          img
+            position: absolute
+            top: 17px
+            left: 70px
+            height: 36px
+            
+        
 
 @media (min-width: 1200px)
   nav
     .flex.center-v.inner
       left: 50%
       margin-left: -600px
+
+
+
+
+nav.small
+  .flex.center-v.inner
+    padding-top: 10px
+    padding-bottom: 10px
+    background: rgba(35,35,35,0.4)
+
+    .unit:nth-child(1)
+      text-align: left
+      width: 30%
+
+    .unit:nth-child(2)
+      text-align: right
+      width: 70%
+
+    .unit
+      ol
+        li
+          margin: 0
+          a
+            margin: 0
+            font-size: 11px
+
+      .wordmark-static,
+      .wordmark-active
+        height: 40px
+        width: 40px
+
+        .word,   
+        .static,
+        .flip
+          position: absolute
+          top: 0
+          left: 0
+          height: 40px
+          width: 40px
+
+          svg,
+          img
+            height: 40px
+            width: 40px
+          
+        .word
+          left: 40px
+          
+          svg,
+          img
+            position: absolute
+            top: 0
+            left: 4px
+            width: 33px
+
+
+
+@media (max-width: 570px)
+  nav
+    .flex.center-v.inner
+      padding-top: 10px
+      padding-bottom: 10px
+      background: rgba(35,35,35,0.4)
+
+      .unit:nth-child(1)
+        text-align: left
+        width: 30%
+
+      .unit:nth-child(2)
+        text-align: right
+        width: 70%
+
+      .unit
+        ol
+          li
+            margin: 0
+            a
+              margin: 0
+              font-size: 11px
+
+          li:nth-child(3)
+            display: none
+
+        .wordmark-static,
+        .wordmark-active
+          height: 40px
+          width: 40px
+
+          .word,   
+          .static,
+          .flip
+            position: absolute
+            top: 0
+            left: 0
+            height: 40px
+            width: 40px
+
+            svg,
+            img
+              height: 40px
+              width: 40px
+            
+          .word
+            left: 40px
+            
+            svg,
+            img
+              position: absolute
+              top: 0
+              left: 4px
+              width: 33px
+
 

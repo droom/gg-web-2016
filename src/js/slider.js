@@ -1,12 +1,18 @@
 $( document ).ready(function() {
 
 	$(".index-hero").slick({
-		dots: false,
+		arrows: false,
 		infinite: true,
-		fade: true,
+		// dots: false,
+		// fade: true,
 		speed: 300,
-		autoplay: true,
-		cssEase: 'ease'
+		// autoplay: true,
+		cssEase: 'ease',
+
+		autoplay: false,
+		dots: true,
+		fade: false,
+
 	});
 
 
@@ -29,7 +35,7 @@ $( document ).ready(function() {
 				speed: 800,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				cssEase: 'ease-in-out'
+				// cssEase: 'ease-in-out'
 			}
 		},
 		]

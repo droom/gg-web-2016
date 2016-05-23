@@ -3,12 +3,11 @@ nav#nav
     .unit.top.left
       //- // inline logomark, 4640 bytes
       //- without inlining this, we have to make 3 seperate calls to the server to get the complete logo.
-
-      include _wordmark-inline
-      //- include _wordmark-link
+      //- include _wordmark-inline
+      include _wordmark-link
 
     .unit.center-v
-      ol
+      ol.reset
         li.cta
           a(href="#").plain.caps Sign up
         li
