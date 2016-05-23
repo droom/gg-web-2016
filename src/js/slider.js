@@ -53,14 +53,7 @@ $( document ).ready(function() {
 		console.log(currentSlide);
 
 
-		// if ($('#profile-turn').hasClass('turn')){
-		// 	$('#profile-turn').addClass('turn-again')
-		// } else {
-		// 	$('#profile-turn').addClass('turn')
-		// }
-
 		$('#profile-turn').addClass('turn')
-
 
 
 		if (nextSlide == 0){

@@ -7,7 +7,7 @@ $( document ).ready(function() {
 			e.preventDefault;
 
 			var second = $(this).find('.second');
-			second.css('height', '120px');
+			second.css('height', '130px');
 			second.css('opacity', '1');
 
 		}
