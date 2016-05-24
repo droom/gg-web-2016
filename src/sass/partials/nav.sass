@@ -3,6 +3,7 @@ nav
   margin: auto
   width: 100%
   position: fixed
+  transition: all 300ms ease
 
   .flex.center-v.inner
     .unit:nth-child(1)
@@ -40,39 +41,45 @@ nav
             color: $copyDark
 
 
-      .wordmark-static,
       .wordmark-active
         position: relative
         height: 70px
-        width: 70px
-        transform-origin: 50% 50%
 
         .word,   
-        .static,
         .flip
           position: absolute
           top: 0
           left: 0
-          height: 70px
-          width: 70px
-
-          svg,
-          img
-            height: 70px
-            width: 70px
-          
-        .word
-          left: 0
-          top: 0
           
           svg,
           img
             position: absolute
-            top: 17px
-            left: 70px
-            height: 36px
+            top: 0
+            left: 0
+
+        .flip
+          height: 70px
+          width: 70px
+          svg,
+          img
+            transition: all 300ms ease
+            height: 70px
+            width: 70px
             
-        
+        .word
+          height: 70px
+          svg,
+          img
+            transition: all 300ms ease
+            transform-origin: 0 0
+            height: 70px
+
+
+
+
+
+// @media (max-width: 570px)
+
 
 nav.small
   background: rgba(35,35,35,0.4)
@@ -97,91 +104,37 @@ nav.small
             margin: 0
             font-size: 11px
 
-      .wordmark-static,
+        li:nth-child(3)
+          display: none
+
       .wordmark-active
+        position: relative
         height: 40px
-        width: 40px
 
         .word,   
-        .static,
         .flip
           position: absolute
           top: 0
           left: 0
-          height: 40px
-          width: 40px
-
           svg,
           img
-            height: 40px
-            width: 40px
-          
-        .word
-          left: 40px
-          
-          svg,
-          img
-            position: absolute
-            top: 0
-            left: 4px
-            width: 33px
-
-
-
-@media (max-width: 570px)
-  nav
-    background: rgba(35,35,35,0.4)
-
-    .flex.center-v.inner
-      padding-top: 10px
-      padding-bottom: 10px
-
-      .unit:nth-child(1)
-        text-align: left
-        width: 30%
-
-      .unit:nth-child(2)
-        text-align: right
-        width: 70%
-
-      .unit
-        ol
-          li
-            margin: 0
-            a
-              margin: 0
-              font-size: 11px
-
-          li:nth-child(3)
-            display: none
-
-        .wordmark-static,
-        .wordmark-active
-          height: 40px
-          width: 40px
-
-          .word,   
-          .static,
-          .flip
             position: absolute
             top: 0
             left: 0
+
+        .flip
+          height: 40px
+          width: 40px
+          svg,
+          img
             height: 40px
             width: 40px
-
-            svg,
-            img
-              height: 40px
-              width: 40px
             
-          .word
-            left: 40px
-            
-            svg,
-            img
-              position: absolute
-              top: 0
-              left: 4px
-              width: 33px
+        .word
+          height: 40px
+          svg,
+          img
+            height: 40px
+          
 
 
