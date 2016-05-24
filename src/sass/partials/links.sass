@@ -47,14 +47,19 @@ a
   &.small
     font-size: $font-sm-pt
     line-height: $font-sm-ld
-    padding: 15px
+    padding: 1em
 
-  &.app + a.app
-    margin-left: 6px
+  &.app
+    border-radius: 3px
+    display: inline-block
+    line-height: 0
+    background: $copyDark
 
-  &.app 
-    img
-      border-radius: 4px
+    & + a.app
+      margin-left: 15px
+
+    &:hover
+      background: $teal
 
   &.arrow
     opacity: 0.6

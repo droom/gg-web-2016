@@ -63,6 +63,35 @@ header.index
 
 
 
+// @media (max-width: 570px)
+
+//   .hero.app-buttons.inline
+//     margin-top: 0
+//     height: 150px
+//     position: relative
+
+//     display: block
+//     line-height: 0
+//     text-align: center
+//     z-index: 999
+//     width: 100%
+    
+//     a.app
+//       border: rgba(255,255,255,0.5) 0.075rem solid
+//       background: none
+//       opacity: 0.7
+
+//       & + a.app
+//         margin-left: 20px
+
+//       &:hover
+//         background: rgba(0, 0, 0, 0.8)
+//         opacity: 1
+
+
+
+
+
 header.index
   .index-hero
     .hero-1
@@ -109,10 +138,63 @@ header.index
         background: url('../img/components/hero/hero-3-1000.jpg') 50% 40%
         
 
+
+
+
+
+.hero.app-buttons.inline
+  margin-top: -160px
+  display: block
+  line-height: 0
+  text-align: center
+  z-index: 999
+  position: absolute
+  width: 100%
+  
+  a.app
+    border: rgba(255,255,255,0.5) 0.075rem solid
+    background: none
+    opacity: 0.7
+
+    & + a.app
+      margin-left: 20px
+
+    &:hover
+      background: rgba(0, 0, 0, 0.8)
+      opacity: 1
+
+
+
+
+
 @media (max-width: 570px)
   header.index
     height: 100%
+    margin-bottom: 70px
     
+    .hero.app-buttons.inline
+      margin-top: 0
+      height: 70px
+      padding-top: 15px
+      display: block
+      position: absolute
+      background: rgba(0,0,0,0.4)
+      
+      a.app
+        border: rgba(255,255,255,0.2) 0.075rem solid
+        background: none
+        opacity: 0.7
+
+        & + a.app
+          margin-left: 15px
+
+        &:hover
+          background: $teal
+          border-color: $teal
+          opacity: 1
+
+
+
     .index-hero
       .flex.stretch.wrap
         .unit
@@ -122,7 +204,6 @@ header.index
           hgroup
             font-size: 10px
             line-height: 14px
-      
       
       .hero-1
         background: url('../img/components/hero/hero-1-570.jpg') 50% 0
