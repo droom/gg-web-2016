@@ -9,7 +9,7 @@ $( document ).ready(function() {
 				$("#steps ol .flip").addClass('turn');
 				console.log("addClass");
 
-			}, offset: -400
+			}, offset: -350
 		})
 
 		var waypoint3 = new Waypoint({
@@ -19,7 +19,7 @@ $( document ).ready(function() {
 				$("#nav").removeClass('small');
 				console.log("removeClass");
 
-			}, offset: -399
+			}, offset: -349
 		})
 	}
 
