@@ -1,19 +1,39 @@
 section.quad
   .flex
     min-height: 400px
-    .info
-      padding: 15px 10px
-      .second
-        transition: $transition-slow
-        overflow: hidden
-        ul li:first-child
-          margin-bottom: 12px
-          
-    .unit
+
+
+    .unit.stretch.quad
       width: 50%
-      .flex
-        .unit
+      
+
+
+      .flex.stretch
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,0.4)
+        transition: $transition-slow
+
+        &:hover
           width: 100%
+          height: 100%
+          background: rgba(0,0,0,0.9)
+          
+          // pointer: cursor
+          cursor: pointer
+
+
+        .unit.center-v.info
+          padding: 15px 10px
+
+          .first
+
+          .second
+            transition: $transition-slow
+            overflow: hidden
+            ul li:first-child
+              margin-bottom: 12px
+              
 
       hgroup
         margin: 10px 0 2px 0
@@ -25,17 +45,14 @@ section.quad
       ul li a:hover
         color: $teal  
 
-    .quad
-      .flex.stretch
-        transition: $transition-slow
-        background: radial-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5))
 
-    .quad:hover
-      .flex.stretch
-        transition: $transition-slow
-        background: radial-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9))
-        opacity: 1
 
+
+
+// Images
+
+section.quad
+  .flex
     .quad-1
       background: url("../img/components/quad/quad-1-800.jpg") 50% 30%
 
@@ -47,7 +64,6 @@ section.quad
 
     .quad-4
       background:  url("../img/components/quad/quad-4-800.jpg") 40% 50%
-
 
 
 
