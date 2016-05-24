@@ -1,17 +1,30 @@
 $( document ).ready(function() {
 
 	$(".index-hero").slick({
+
 		arrows: false,
 		infinite: true,
-		// dots: false,
-		// fade: true,
 		speed: 300,
-		// autoplay: true,
-		cssEase: 'ease',
-
-		autoplay: false,
+		autoplay: true,
 		dots: true,
-		fade: false,
+		fade: true,
+
+		responsive: [
+
+		{
+			breakpoint: 570,
+			settings: {
+				arrows: false,
+				infinite: true,
+				speed: 300,
+				autoplay: true,
+				dots: true,
+				fade: false,
+			}
+		},
+
+		]
+
 
 	});
 
