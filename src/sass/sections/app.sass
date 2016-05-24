@@ -51,6 +51,8 @@ section.mobile
               margin: 0 auto -6px auto
               height: 70px
               width: 70px
+              user-select: none
+              user-drag: none
               
             li:nth-child(1)::before
               content: url("../img/icons/icon-benefit-1.svg")
@@ -69,11 +71,12 @@ section.mobile
 @media (max-width: 980px)
   section.mobile
     .all
+      -webkit-transform: rotate(0deg)
       transform: rotate(0deg)
-      zoom: 0.85
-      margin-top: 10px
+      zoom: .85
+      margin-top: 51px
       margin-left: 0
-
+      
     .flex
       .details,
       .iphone
