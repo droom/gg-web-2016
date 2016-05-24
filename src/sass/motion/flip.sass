@@ -1,8 +1,27 @@
+.size70
+  margin: auto
+  height: 70px
+  width: 70px
+
+  img
+    width: 100%
+    height: 100%
+    
+      
+.size160
+  margin: auto
+  height: 160px
+  width: 160px
+  
+  img
+    width: 100%
+    height: 100%
+
+
 .flip
   margin: auto
   position: relative
   transform-origin: 50% 50%
-  
 
   img, svg
     position: absolute
@@ -20,6 +39,25 @@
     opacity: 0
     transform: rotateY(180deg)
 
+
+  &.turn-q
+    animation-name: turnRight
+    animation-duration: 800ms 
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+
+    .first,
+    .second
+      animation-duration: 800ms 
+      animation-fill-mode: forwards
+      animation-timing-function: ease
+    .first
+      animation-name: hide
+    .second
+      animation-name: show
+
+
+
   &.turn
     animation-name: turnRight
     animation-duration: 800ms 
@@ -35,7 +73,6 @@
       animation-name: hide
     .second
       animation-name: show
-
 
 
   &.delay0
@@ -64,17 +101,7 @@
       animation-delay: 750ms
 
 
-  &.size70
-    height: 70px
-    width: 70px
-    
-  &.size160
-    height: 160px
-    width: 160px
-    
-    img
-      width: 100%
-      height: 100%
+
 
 
 @keyframes turnRight

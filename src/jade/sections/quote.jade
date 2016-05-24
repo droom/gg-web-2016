@@ -2,9 +2,13 @@ section.quote.dark
 
   .bind.center
 
-    .flip.size160#profile-turn
-      img(src="img/components/testimonials/testimonial-0.png").first#profile-1
-      img(src="img/components/testimonials/testimonial-1.png").second#profile-2
+    .fader.size160
+      .wash#wash
+      img(src="img/components/testimonials/testimonial-0.png")#profile-overlay
+
+    //- .flip.size160#profile-turn
+    //-   img(src="img/components/testimonials/testimonial-0.png").first.no-select.no-drag.no-pointer#profile-1
+    //-   img(src="img/components/testimonials/testimonial-1.png").second.no-select.no-drag.no-pointer#profile-2
 
 
     .testimonials-img.flex.stretch#profile-row
@@ -18,15 +22,15 @@ section.quote.dark
 
     .testimonials
       div
-        blockquote I can now save my time for things I’d rather do.
+        blockquote.no-select I can now save my time for things I&rsquo;d rather do.
         cite Yo Han
 
       div
-        blockquote GoGetters go the extra mile to get everything on my to-do list done. I never have to worry.
+        blockquote.no-select GoGetters go the extra mile to get everything on my todo list done. I never have to worry.
         cite Malvin
       
       div
-        blockquote My job gets done with reliable help while I also save on petrol, toll and parking!
+        blockquote.no-select My job gets done with reliable help while I also save on petrol, toll and parking!
         cite Aziz
 
 

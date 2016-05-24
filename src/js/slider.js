@@ -8,7 +8,6 @@ $( document ).ready(function() {
 		autoplay: true,
 		dots: true,
 		fade: true,
-
 		responsive: [
 
 		{
@@ -33,7 +32,6 @@ $( document ).ready(function() {
 		dots: false,
 		arrows: false,
 		infinite: false,
-		// speed: 1600,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		responsive: [
@@ -41,14 +39,12 @@ $( document ).ready(function() {
 		{
 			breakpoint: 700,
 			settings: {
-				// autoplay: true,
 				arrows: false,
 				dots: true,
 				infinite: true,
 				speed: 800,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				// cssEase: 'ease-in-out'
 			}
 		},
 		]
@@ -61,36 +57,34 @@ $( document ).ready(function() {
 	// });
 
 
+	var qState 	= 	0
+	var qOver	= 	$('#profile-overlay')
+	var qWash	= 	$('#wash')
+
+	var q1 		= 	$('#profile-1')
+	var q2 		= 	$('#profile-2')
+
+
+
+
 	$('.testimonials').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		console.log(nextSlide);
-		console.log(currentSlide);
+		
+		$(qWash).css('opacity', '1');
 
+		$(qOver).attr('src', 'img/components/testimonials/testimonial-'+qState+'.png');
+		// $(q1).attr('src', 'img/components/testimonials/testimonial-'+nextSlide+'.png');
+		// $(q2).attr('src', 'img/components/testimonials/testimonial-'+currentSlide+'.png');
+		qState = nextSlide
 
-		$('#profile-turn').addClass('turn')
-
-
-		if (nextSlide == 0){
-			$('#profile-1').css('outline', '2px solid red');
-			$("#profile-2").attr('src', 'img/components/testimonials/testimonial-0.png');
-		}
-
-		if (nextSlide == 1){
-			$('#profile-1').css('outline', '2px solid blue');
-			$("#profile-2").attr('src', 'img/components/testimonials/testimonial-1.png');
-		}
-
-		if (nextSlide == 2){
-			$('#profile-1').css('outline', '2px solid green');
-			$("#profile-2").attr('src', 'img/components/testimonials/testimonial-2.png');
-		}
 	});
 
 
 
 	$('.testimonials').on('afterChange', function(event, slick, direction){
-		// console.log(direction);
 
-		$('#profile-turn').removeClass('turn')
+		$(qWash).css('opacity', '0');
+		$(qOver).attr('src', 'img/components/testimonials/testimonial-'+qState+'.png');
+
 
 	});
 
