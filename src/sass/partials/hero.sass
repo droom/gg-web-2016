@@ -4,7 +4,7 @@ $arrow-pad-top  : 30px
 $arrow-pad-side : 60px
 
 
-header.index
+header
   height: 95%
   position: relative
 
@@ -27,7 +27,7 @@ header.index
     li.slick-active
       opacity: 1
 
-  .index-hero
+  .hero-wrap
     height: 100%
     width:  100%
     display: block
@@ -53,6 +53,7 @@ header.index
         
         .unit
           padding: 0 15px
+          z-index: 89
 
           h1
             margin: 10px 0 35px 0
@@ -61,108 +62,26 @@ header.index
             line-height: 14px
             
 
-
-header.index
-  .index-hero
-    .hero-1
-      background: url('../img/editorial/index/hero-1-1800.jpg') 50% 40%
-    .hero-2
-      background: url('../img/editorial/index/hero-2-1800.jpg') 50% 40%
-    .hero-3
-      background: url('../img/editorial/index/hero-3-1800.jpg') 50% 40%
-
-
 @media (max-width: 1400px)
-  header.index
+  header
     max-height: 900px
-    .index-hero
-      .hero-1
-        background: url('../img/editorial/index/hero-1-1400.jpg') 50% 0%
-      .hero-2
-        background: url('../img/editorial/index/hero-2-1400.jpg') 50% 40%
-      .hero-3
-        background: url('../img/editorial/index/hero-3-1400.jpg') 50% 40%
-        
 
 @media (max-width: 1000px)
-  header.index
+  header
     max-height: 650px
-    .index-hero
-      .hero-1
-        background: url('../img/editorial/index/hero-1-1000.jpg') 9% 40%
-      .hero-2
-        background: url('../img/editorial/index/hero-2-1000.jpg') 50% 40%
-      .hero-3
-        background: url('../img/editorial/index/hero-3-1000.jpg') 50% 40%
-        
 
 @media (max-width: 750px)
-  header.index
+  header
     max-height: 650px
-    .index-hero
-      .hero-1
-        background: url('../img/editorial/index/hero-1-1000.jpg') 9% 40%
-      .hero-2
-        background: url('../img/editorial/index/hero-2-1000.jpg') 50% 40%
-      .hero-3
-        background: url('../img/editorial/index/hero-3-1000.jpg') 50% 40%
-        
 
-
-
-
-
-.hero.app-buttons.inline
-  margin-top: -160px
-  display: block
-  line-height: 0
-  text-align: center
-  z-index: 999
-  position: absolute
-  width: 100%
-  
-  a.app
-    border: rgba(255,255,255,0.5) 0.075rem solid
-    background: none
-    opacity: 0.7
-
-    & + a.app
-      margin-left: 20px
-
-    &:hover
-      background: rgba(0, 0, 0, 0.8)
-      opacity: 1
-
-
-
+@media (max-width: 570px)
+  header
+    height: 100%
 
 @media (max-width: 570px)
   header.index
-    height: 100%
     margin-bottom: 70px
-    
-    .hero.app-buttons.inline
-      margin-top: 0
-      height: 70px
-      padding-top: 15px
-      display: block
-      position: absolute
-      background: rgba(0,0,0,0.4)
-      
-      a.app
-        border: rgba(255,255,255,0.2) 0.075rem solid
-        background: none
-        opacity: 0.7
-
-        & + a.app
-          margin-left: 15px
-
-        &:hover
-          background: $teal
-          border-color: $teal
-          opacity: 1
-
-    .index-hero
+    .hero-wrap
       .flex.stretch.wrap
         .unit
           margin-top: 30px
@@ -171,12 +90,6 @@ header.index
           hgroup
             font-size: 10px
             line-height: 14px
-      
-      .hero-1
-        background: url('../img/editorial/index/hero-1-570.jpg') 50% 0
-      .hero-2
-        background: url('../img/editorial/index/hero-2-570.jpg') 50% 0
-      .hero-3
-        background: url('../img/editorial/index/hero-3-570.jpg') 50% 0
-        
+
+
 

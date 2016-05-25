@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-	if ( $('header.index').length ) {
+	if ( $('header').length ) {
 		var waypoint3 = new Waypoint({
 			element: document.getElementById('waypoint-1'),
 

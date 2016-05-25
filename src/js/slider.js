@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-	$(".index-hero").slick({
+	$(".hero-wrap").slick({
 
 		arrows: false,
 		infinite: true,

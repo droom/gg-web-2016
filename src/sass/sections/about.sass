@@ -1,16 +1,26 @@
 section.about
-	.flex
-		.unit
-			width: 50%
-			padding: 40px
-      
-	img.shrink
-		max-width: 100%
+  .flex
+    .unit
+      width: 50%
+      padding: 0 4%
+      p 
+        text-align: justify
+  
+  img.shrink
+    max-width: 100%
+    margin-top: -25px
 
-@media (max-width: 700px)
-	section.about
-		.flex
-			flex-wrap: wrap
-			.unit
-				width: 100%
-				padding: 20px
+@media (max-width: 650px)
+  section.about
+    .flex
+      flex-wrap: wrap
+      .unit
+        width: 100%
+        padding: 20px 0
+        p 
+          text-align: left
+          
+
+    img.shrink
+      max-width: 100%
+      margin-top: -15px
