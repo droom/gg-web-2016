@@ -1,21 +1,38 @@
-section.wisdom.center.light
-  h2 Words of Wisdom from out GoGetters
-  .inner
-    .flex.bind
-      .unit
-        img(src="img/components/wisdom/wisdom-1.png")
-        h3 Name
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad ipsam rem eius enim commodi reprehenderit molestias culpa consequuntur, eos porro aliquid minima dolorem repudiandae vel illo illum eveniet dignissimos.
-      .unit
-        img(src="img/components/wisdom/wisdom-2.png")
-        h3 Name
+section.quote.light
+  .bind.center
+    h2 Words of Wisdom from out GoGetters
+
+    .fader.size160
+      .wash#wash
+      img(src="img/components/testimonials/testimonial-0.png")#profile-overlay
+
+    //- .flip.size160#profile-turn
+    //-   img(src="img/components/testimonials/testimonial-0.png").first.no-select.no-drag.no-pointer#profile-1
+    //-   img(src="img/components/testimonials/testimonial-1.png").second.no-select.no-drag.no-pointer#profile-2
+
+    .testimonials-img.flex.stretch#profile-row
+      .unit.stretch.size160
+        img(src="img/components/wisdom/wisdom-1.png").profile.testimonials-img-0.no-select.no-drag
+      .unit.stretch.size160
+        img(src="img/components/wisdom/wisdom-2.png").profile.testimonials-img-1.no-select.no-drag
+      .unit.stretch.size160
+        img(src="img/components/wisdom/wisdom-3.png").profile.testimonials-img-2.no-select.no-drag
+
+
+    .testimonials
+      div
+        hgroup Name
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad ipsam rem eius enim commodi reprehenderit molestias culpa consequuntur, eos porro aliquid minima dolorem repudiandae vel illo illum eveniet dignissimos.
 
-      .unit
-        img(src="img/components/wisdom/wisdom-3.png")
-        h3 Name
+      div
+        hgroup Name
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad ipsam rem eius enim commodi reprehenderit molestias culpa consequuntur, eos porro aliquid minima dolorem repudiandae vel illo illum eveniet dignissimos.
       
-    .flex.wrap
-      .unit
-        a(href="#").plain.caps.button.outline.inline-block Become a Gogetter
+      div
+        hgroup Name
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ad ipsam rem eius enim commodi reprehenderit molestias culpa consequuntur, eos porro aliquid minima dolorem repudiandae vel illo illum eveniet dignissimos.
+
+  
+.flex.wrap.center-v.center-h
+  .unit.sretch
+    a(href="#").plain.caps.button.cta Become a Gogetter
