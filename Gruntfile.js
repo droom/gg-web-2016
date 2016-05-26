@@ -110,7 +110,9 @@ module.exports = function(grunt) {
           files: {
             "dist/become.html": ["src/jade/become.jade"],
             "dist/index.html": ["src/jade/index.jade"],
-            "dist/jobs.html": ["src/jade/jobs.jade"]
+            "dist/jobs.html": ["src/jade/jobs.jade"],
+            "dist/job.html": ["src/jade/job.jade"]
+
           }
         }
       }

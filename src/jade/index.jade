@@ -1,9 +1,16 @@
+- var appbtns       = false
+- var type          = "large"
+- var page          = "index"
+- var strap         = "There's an opening at GoGet"
+- var titles        = [["Get More Stuff Done", "HERO CTA [1]", "/path/to" ],  ["Easy & Reliable Help", "HERO CTA [2]", "/path/to"], ["Reliable Delivery Service", "HERO CTA [3]", "/path/to"]]
+
+
 doctype html
 html
   include partials/head
   
   body
-    include sections/hero-index
+    include sections/hero
     include sections/steps
     include sections/video
     include sections/quad
@@ -11,6 +18,5 @@ html
     include sections/quote
     include sections/earn
     include sections/footer
-
 
     include partials/scripts
