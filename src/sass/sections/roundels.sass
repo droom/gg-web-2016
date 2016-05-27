@@ -1,5 +1,11 @@
-section.quote
+section.roundels
+
+  h2 + .bind
+    padding-top: 10px
   
+  .bind
+    padding: 40px 40px 40px 40px
+
   h2 + .inner
     padding-top: 0
 
@@ -30,6 +36,10 @@ section.quote
   .testimonials
     width: 100%
     
+    & + a.button
+      margin-top: 60px
+      display: inline-block
+
     .slick-list.draggable
       margin-top: -160px
       padding-top: 160px
@@ -54,8 +64,7 @@ section.quote
 
 
 @media (max-width: 700px)
-  section.quote
-
+  section.roundels
     .fader
       display: block
 
@@ -71,7 +80,7 @@ section.quote
 
 
 @media (min-width: 701px)
-  section.quote
+  section.roundels
     .fader
       display: none
 

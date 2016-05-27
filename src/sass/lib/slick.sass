@@ -1,65 +1,9 @@
-
-
 .slick-prev:before,
 .slick-next:before
   color: black
 
 .slick-loading .slick-list
   background: #fff url('../img/components/hero/ajax-loader.gif') center center no-repeat
-
-.slick-prev, .slick-next
-  font-size: 0
-  line-height: 0
-  position: absolute
-  top: 50%
-  display: block
-  width: 20px
-  height: 20px
-  padding: 0
-  cursor: pointer
-  color: transparent
-  border: none
-  outline: none
-  background: transparent
-
-.slick-prev
-  &:hover, &:focus
-    color: transparent
-    outline: none
-    background: transparent
-
-.slick-next
-  &:hover, &:focus
-    color: transparent
-    outline: none
-    background: transparent
-
-.slick-prev
-  &:hover:before, &:focus:before
-    opacity: 1
-
-.slick-next
-  &:hover:before, &:focus:before
-    opacity: 1
-
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
-  opacity: .25
-
-.slick-prev:before, .slick-next:before
-  // font-size: 20px
-  line-height: 1
-  opacity: .6
-  color: white
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
-[dir='rtl'] .slick-prev:before,
-.slick-next:before
-  content: url("../img/buttons/arrow-right.svg")
-
-[dir='rtl'] .slick-next:before,
-.slick-prev:before
-  content: url("../img/buttons/arrow-left.svg")
 
 .slick-dots
   position: absolute
@@ -97,11 +41,8 @@
       text-indent: -9999px
       border-radius: 50%
       
-        
     &.slick-active
       opacity: .75
-      
-
 
 .slick-slider
   position: relative
@@ -175,26 +116,58 @@
 
 .slick-arrow.slick-hidden
   display: none
-  
 
 .slider
   width: 50%
   margin: 0 auto
 
 
-.slick-prev,
-[dir='rtl'] .slick-prev
-  left: -20px
-  right: auto
+.slick-prev, .slick-next
+  font-size: 0
+  line-height: 0
+  position: absolute
+  top: 50%
+  display: block
+  width: 20px
+  height: 20px
+  padding: 0
+  cursor: pointer
+  color: transparent
+  border: none
+  outline: none
+  background: transparent
 
-.slick-next,
-[dir='rtl'] .slick-next
-  right: -20px
-  left: auto
+.slick-prev
+  &:hover, &:focus
+    color: transparent
+    outline: none
+    background: transparent
+
+.slick-next
+  &:hover, &:focus
+    color: transparent
+    outline: none
+    background: transparent
+
+.slick-prev
+  &:hover:before, &:focus:before
+    opacity: 1
+
+.slick-next
+  &:hover:before, &:focus:before
+    opacity: 1
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
+  opacity: .25
+
+.slick-prev:before, .slick-next:before
+  line-height: 1
+  opacity: .6
+  color: white
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
   
-.slick-arrow
-  padding: 0px
-  margin: 0
+
 
 
       

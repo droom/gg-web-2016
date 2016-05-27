@@ -7,7 +7,9 @@ header.center(class=type, class=page)(class=appbtns ? 'appbtns' : '')#waypoint-1
         .hero
           .flex.stretch.wrap
             .unit.center-v
-              hgroup=strap
+              if strap
+                hgroup=strap
+              
               h1 #{val[0]}
 
               if val[1]
