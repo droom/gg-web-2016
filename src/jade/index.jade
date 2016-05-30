@@ -11,11 +11,27 @@ html
   
   body
     include sections/hero
-    include sections/steps
-    include sections/video
-    include sections/quad
-    include sections/app
-    include sections/quote
-    include sections/earn
+    
+    .ship
+
+      .cargo#cargo-steps
+        include sections/steps
+
+      .cargo#cargo-video
+        include sections/video
+      
+      .cargo#cargo-quad
+        include sections/quad
+      
+      .cargo#cargo-app
+        include sections/app
+
+      .cargo#cargo-quote
+        include sections/quote
+
+      .cargo#cargo-earn
+        include sections/earn
+
+
     include sections/footer
     include partials/scripts
