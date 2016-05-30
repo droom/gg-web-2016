@@ -1,5 +1,5 @@
 a
-  transition: $transition-med
+  @include tween(300ms)
 
   &.inline-block
     display: inline-block
@@ -36,10 +36,10 @@ a
   &.white
     background: white
     &:hover
-      background: $teal
+      background: $accent
       
   &.cta
-    background: $teal
+    background: $accent
     color: white
 
     &:hover
@@ -61,13 +61,14 @@ a
       margin-left: 15px
 
     &:hover
-      background: $teal
+      background: $accent
 
   &.arrow
+    @include tween(300ms)
     opacity: 0.6
     width: 10%
-    transition: $transition-med
     padding: 20px
+
     
     &:hover
       opacity: 1
@@ -84,7 +85,7 @@ a
     padding: 13px 15px
 
     &:hover
-      background: $teal
+      background: $accent
       
 
 

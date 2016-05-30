@@ -15,9 +15,9 @@ section.roundels
     
     #profile-overlay,
     #wash
+      @include tween(300ms)
       width: 100%
       height: 100%
-      transition: all 300px ease 
       position: absolute
       top: 0
       left: 0
@@ -27,7 +27,6 @@ section.roundels
       border-radius: 50%
       z-index: 30
       opacity: 0
-      transition: opacity ease 300ms
       
   .testimonials-img
     .profile

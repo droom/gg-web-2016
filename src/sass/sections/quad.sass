@@ -2,15 +2,15 @@ section.quad
   .flex
     min-height: 400px
 
-
     .unit.stretch.quad
       width: 50%
 
       .flex.stretch
+        @include tween(400ms)
+
         width: 100%
         height: 100%
         background: rgba(0,0,0,0.4)
-        transition: $transition-slow
 
         &:hover
           width: 100%
@@ -18,14 +18,14 @@ section.quad
           background: rgba(0,0,0,0.9)
           cursor: pointer
 
-
         .unit.center-v.info
           padding: 15px 10px
 
           .first
 
           .second
-            transition: $transition-slow
+            @include tween(400ms)
+            
             overflow: hidden
             ul li:first-child
               margin-bottom: 12px
@@ -39,8 +39,7 @@ section.quad
         line-height: 1.6em
         padding: 0 10px
       ul li a:hover
-        color: $teal  
-
+        color: $accent  
 
 
 // Images
@@ -58,7 +57,6 @@ section.quad
 
     .quad-4
       background:  url("../img/components/quad/quad-4-800.jpg") 40% 50%
-
 
 
 @media (max-width: 800px)
