@@ -18,19 +18,18 @@ nav
 
     .unit
       ol li
-        display: inline
-        color: white
         @include tween(300ms)
-
+        display: inline
+        // color: $light
         a
           border-radius: 3px
           padding: 12px 13px 10px 13px
-          color: white
+          color: $light
           font-size: 12px
           
           &:hover
-            background: $white
-            color: $copyDark
+            background: $light
+            color: $dark
 
         & + li
         margin-left: 15px
@@ -39,8 +38,8 @@ nav
           a
             background: $accent
           a:hover
-            background: $white
-            color: $copyDark
+            background: $light
+            color: $dark
 
 
       .wordmark-active
