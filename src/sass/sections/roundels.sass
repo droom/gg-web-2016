@@ -2,12 +2,12 @@ section.roundels
 
   h2 + .bind
     padding-top: 10px
-  
-  .bind
-    padding: 40px 40px 40px 40px
-
+    
   h2 + .inner
     padding-top: 0
+
+  .bind
+    padding: 40px 40px 62px 40px
 
   .fader
     position: relative
@@ -36,15 +36,16 @@ section.roundels
     width: 100%
     
     & + a.button
-      margin-top: 60px
       display: inline-block
+      display: none
 
     .slick-list.draggable
       margin-top: -160px
       padding-top: 160px
+      padding-bottom: 30px
 
     .slick-dots
-      bottom: 0
+      margin-bottom: 22px
 
     .slick-slide
       padding: 20px 20px 0 20px
@@ -57,13 +58,18 @@ section.roundels
         line-height: 1.25em
         letter-spacing: 0.05em
       
-      cite
+      cite,
+      hgroup
         margin: 10px 0
         font-style: normal
 
 
 @media (max-width: 700px)
   section.roundels
+    .bind
+      padding-left: 0
+      padding-right: 0 
+
     .fader
       display: block
 
@@ -74,8 +80,6 @@ section.roundels
       .slick-slide
         blockquote
           min-height: auto
-        cite
-          margin: 10px 0 50px 0
 
 
 @media (min-width: 701px)
