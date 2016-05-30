@@ -99,23 +99,52 @@ module.exports = function(grunt) {
         }
       },
 
+
+
+      // jade: {
+      //   compile: {
+      //     options: {
+      //       pretty: true,
+      //       data: {
+      //         debug: false
+      //       }
+      //     },
+      //     files: {
+      //       "dist/become.html": ["src/jade/become.jade"],
+      //       "dist/index.html": ["src/jade/index.jade"],
+      //       "dist/jobs.html": ["src/jade/jobs.jade"],
+      //       "dist/job.html": ["src/jade/job.jade"]
+
+      //     }
+      //   }
+      // },
+
+
       jade: {
         compile: {
           options: {
             pretty: true,
             data: {
-              debug: false
+              debug: true,
+              timestamp: "<%= new Date().getTime() %>"
             }
           },
-          files: {
-            "dist/become.html": ["src/jade/become.jade"],
-            "dist/index.html": ["src/jade/index.jade"],
-            "dist/jobs.html": ["src/jade/jobs.jade"],
-            "dist/job.html": ["src/jade/job.jade"]
-
-          }
+          files: [{
+            expand: true,
+            cwd: 'src/jade',
+            src: [ '*.jade' ],
+            dest: 'dist/',
+            ext: '.html'
+          }]
         }
-      }
+      },
+
+
+
+
+
+
+
 
     });
 
