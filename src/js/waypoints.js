@@ -7,7 +7,7 @@ $( document ).ready(function() {
 			handler: function(direction) {
 				$("#nav").addClass('small');
 				$("#steps ol .flip").addClass('turn');
-				console.log("addClass");
+				// console.log("addClass");
 
 			}, offset: -350
 		})
@@ -17,7 +17,7 @@ $( document ).ready(function() {
 			handler: function(direction) {
 
 				$("#nav").removeClass('small');
-				console.log("removeClass");
+				// console.log("removeClass");
 
 			}, offset: -349
 		})

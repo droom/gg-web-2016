@@ -30,7 +30,6 @@ section.quad
             ul li:first-child
               margin-bottom: 12px
               
-
       hgroup
         margin: 10px 0 2px 0
         font-weight: 400
@@ -42,35 +41,52 @@ section.quad
         color: $accent  
 
 
-// Images
+
+
+
 
 section.quad
   .flex
     .quad-1
-      background: url("../img/components/quad/quad-1-800.jpg") 50% 30%
-
+      background: url("../img/components/quad/quad-1-400.jpg") 50% 30%
     .quad-2
-      background:  url("../img/components/quad/quad-2-800.jpg") 60% 30%
-
+      background: url("../img/components/quad/quad-2-400.jpg") 50% 30%
     .quad-3
-      background:  url("../img/components/quad/quad-3-800.jpg") 70% 38%
-
+      background: url("../img/components/quad/quad-3-400.jpg") 40% 30%
     .quad-4
-      background:  url("../img/components/quad/quad-4-800.jpg") 40% 50%
+      background: url("../img/components/quad/quad-4-400.jpg") 100% 10%
+      
 
-
-@media (max-width: 800px)
+@media (min-width: 800px)
   section.quad
     .flex
       .quad-1
-        background: url("../img/components/quad/quad-1-400.jpg") 50% 30%
-
+        background: url("../img/components/quad/quad-1-800.jpg") 50% 30%
       .quad-2
-        background:  url("../img/components/quad/quad-2-400.jpg") 50% 30%
-
+        background: url("../img/components/quad/quad-2-800.jpg") 60% 30%
       .quad-3
-        background:  url("../img/components/quad/quad-3-400.jpg") 40% 30%
-
+        background: url("../img/components/quad/quad-3-800.jpg") 70% 38%
       .quad-4
-        background:  url("../img/components/quad/quad-4-400.jpg") 100% 10%
+        background: url("../img/components/quad/quad-4-800.jpg") 40% 50%
+
+
+@media (min-width: 1600px)
+  section.quad
+    .flex
+      .quad-1
+        background: url("../img/components/quad/quad-1-400.jpg") cover
+      .quad-2
+        background: url("../img/components/quad/quad-2-400.jpg") cover
+      .quad-3
+        background: url("../img/components/quad/quad-3-400.jpg") cover
+      .quad-4
+        background: url("../img/components/quad/quad-4-400.jpg") cover
+
+
+
+
+
+
+
+
 

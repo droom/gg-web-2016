@@ -1,11 +1,11 @@
-$dark:        		#23262e
+$dark:        		  #23262e
 $light:           	#f2f2f2
 $accent:            rgba(0, 180, 173, 0.98)
 
 $roboto:          	"Roboto", "Helvetica Neue", "Lucida Grande", Helvetica, Arial, sans-serif
 
 $headlines:       	$roboto
-$running: 		  		$roboto
+$running:			      $roboto
 $testimonials: 	  	$roboto
 
 $font-sm-ld:      	1.5em
@@ -17,9 +17,7 @@ $bind-wide:    	  	1200px
 	transition: all $speed ease
 
 
-
 @import "lib/slick.sass"
-
 @import "partials/reset.sass"
 @import "partials/type.sass"
 @import "partials/links.sass"
@@ -41,9 +39,211 @@ $bind-wide:    	  	1200px
 @import "sections/video.sass"
 @import "sections/footer.sass"
 @import "sections/job.sass"
-@import "sections/about.sass"
+@import "sections/blurb.sass"
 @import "sections/benefits.sass"
 
 @import "motion/app.sass"
 @import "motion/flip.sass"
+
+
+
+
+
+section.benefits
+	ul.benefits
+		padding-top: 0
+		li
+			padding: 10px 15px
+			hgroup:before
+				display: block
+			hgroup + p
+				margin-top: 10px
+			p
+				opacity: 0.5
+
+		li:nth-child(1)
+			hgroup:before
+				content: url("../img/icons/icon-gg-1.svg")
+
+		li:nth-child(2)
+			hgroup:before
+				content: url("../img/icons/icon-gg-2.svg")
+
+		li:nth-child(2)
+			hgroup:before
+				content: url("../img/icons/icon-gg-2.svg")
+
+		li:nth-child(3)
+			hgroup:before
+				content: url("../img/icons/icon-gg-3.svg")
+        
+		li:nth-child(4)
+			hgroup:before
+				content: url("../img/icons/icon-gg-4.svg")
+
+		li:nth-child(5)
+			hgroup:before
+				content: url("../img/icons/icon-gg-5.svg")
+
+
+
+@media (max-width: 800px)
+	section.benefits
+		ul.benefits
+			flex-wrap: wrap
+			justify-content: center
+
+			li
+				flex-basis: 10%
+				width: 50%
+				max-width: 50%
+				min-width: 50%
+				border: 1px solid rgba(255,255,255,0.08)
+				border-top: none
+				
+				&:nth-child(2n)
+					border-left: none
+					
+				&:nth-child(1),
+				&:nth-child(2)
+					border-top: 1px solid rgba(255,255,255,0.08)
+				
+				hgroup:before
+					height: 65px
+				
+				hgroup + p
+					margin: 4px 0
+
+
+
+
+
+
+
+
+section.perks
+	margin-top: -15px
+	ul.perks
+		padding-top: 0
+		li
+			padding: 0 10px 10px 10px
+			
+			.br
+				display: block
+
+			hgroup:before
+				display: block
+			hgroup + p
+				margin-top: 10px
+			p
+				opacity: 0.5
+
+		li:nth-child(1)
+			hgroup:before
+				content: url("../img/icons/icon-gg-1.svg")
+
+		li:nth-child(2)
+			hgroup:before
+				content: url("../img/icons/icon-gg-2.svg")
+
+		li:nth-child(2)
+			hgroup:before
+				content: url("../img/icons/icon-gg-2.svg")
+
+		li:nth-child(3)
+			hgroup:before
+				content: url("../img/icons/icon-gg-3.svg")
+        
+		li:nth-child(4)
+			hgroup:before
+				content: url("../img/icons/icon-gg-4.svg")
+
+		li:nth-child(5)
+			hgroup:before
+				content: url("../img/icons/icon-gg-5.svg")
+
+		li:nth-child(6)
+			hgroup:before
+				content: url("../img/icons/icon-gg-6.svg")
+				
+		li:nth-child(7)
+			hgroup:before
+				content: url("../img/icons/icon-gg-7.svg")
+
+
+
+@media (max-width: 900px)
+	section.perks
+		ul.perks
+			flex-wrap: wrap
+			justify-content: center
+
+			li
+				flex-basis: 10%
+				width: calc(100%/3)
+				max-width: calc(100%/3)
+				min-width: calc(100%/3)
+				border: 1px solid rgba(255,255,255,0.08)
+
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(5),
+				&:nth-child(6)
+					border-left: none
+					
+
+				&:nth-child(4),
+				&:nth-child(5),
+				&:nth-child(5),
+				&:nth-child(6),
+				&:nth-child(7)
+					border-top: none
+					
+				&:nth-child(7)
+					margin-left: -1px
+					padding-right: 1px
+					
+				
+				.br
+					display: inline
+
+
+					
+
+				hgroup:before
+					height: 65px
+				hgroup + p
+					margin: 4px 0
+
+
+
+
+
+@media (max-width: 600px)
+	section.perks
+		ul.perks
+			flex-wrap: wrap
+			justify-content: center
+
+			li
+				flex-basis: 10%
+				width: 50%
+				max-width: 50%
+				min-width: 50%
+				border: 1px solid rgba(255,255,255,0.08)
+				border-top: none
+				&:nth-child(2n)
+					border-left: none
+				&:nth-child(1),
+				&:nth-child(2)
+					border-top: 1px solid rgba(255,255,255,0.08)
+				hgroup:before
+					height: 65px
+				hgroup + p
+					margin: 4px 0
+
+
+
+
+
 
