@@ -1,69 +1,50 @@
 section.roundels
 
   h2 + .bind
-    padding-top: 10px
-    
-  h2 + .inner
     padding-top: 0
 
-  .quote-img-row,
-  .quote-img-iso
+  .quote
     img
-      width:  170px
-      height: 170px
-
-  .quote-words
-    outline: 1px solid red
+      width:    160px
+      height:   160px
+      margin:   auto
 
     .slick-dots
       position: relative
-      bottom: 0
-      left: 0
-      display: block
-      width: 100%
-      outline: 1px solid blue
-
+      bottom:   0
+      left:     0
+      display:  block
+      width:    100%
+    
     .slick-slide
-      padding: 20px
+      padding: 0 20px
+      
+
       cite,
       hgroup
-        margin: 10px 0
-        font-style: normal
+        font-style:   normal
 
+      cite
+        margin:       10px 0
+
+      blockquote,
+      hgroup
+        margin:       20px 0
+
+      blockquote + cite
+        margin:       30px 0
 
 
 @media (max-width: 700px)
   section.roundels
     .bind
-      padding: 40px 0 15px 0
-
-    .quote-img-row
-      display: none
-      opacity: 0
-
-    .quote-img-iso
-      display: block
-      opacity: 1
+      padding:  40px 0 15px 0
 
     a.button
-      margin: 30px 0 20px 0 
-
-    .slick-slide
-      blockquote
-        min-height: auto
-
+      margin:   30px 0 20px 0 
 
 @media (min-width: 701px)
   section.roundels
     .bind
-      padding: 40px 40px 10px 40px
-
-    .quote-img-row
-      display: flex
-      opacity: 1
-      
-      
-    .quote-img-iso
-      display: none
-      opacity: 0
+      padding:  40px 40px 10px 40px
 

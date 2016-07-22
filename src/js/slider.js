@@ -26,8 +26,7 @@ $( document ).ready(function() {
 	});
 
 
-
-	$('.quote-words').slick({
+	$('.quote').slick({
 		dots: false,
 		arrows: false,
 		infinite: false,
@@ -49,37 +48,22 @@ $( document ).ready(function() {
 	});
 
 
-
-
-
-
-	// var qStateA 	= 	0
-	// var qStateB 	= 	0
-	// var qWash		= 	$('#wash')
-	// var qImg1 		= 	$('#profile-1')
-	// var qImg2 		= 	$('#profile-2')
-	// var qImgSpoof	= 	$('#profile-3')
-
-	// $('.testimonials').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		
-	// 	$(qWash).removeClass('turn');
-
-	// 	$(qImg1).attr('src', 'img/components/testimonials/testimonial-'+qStateA+'.png');
-
-	// 	qStateA = currentSlide
-	// 	qStateB = nextSlide
-
+	// var stateA 	= 	0
+	// var stateB 	= 	0
+	// // var before 		= 	$('#iso-before')
+	// // var after 		= 	$('#iso-after')
+	// // var spoof	= 	$('#iso-spoof')
+	// $('.quote-words').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	// // 	$(qWash).removeClass('turn');
+	// 	$(before).attr('src', 'img/components/quote/gogetter-'+stateA+'.png');
+	// 	stateA = currentSlide
+	// 	stateB = nextSlide
 	// 	console.log("nextSlide", nextSlide);
 	// 	console.log("currentSlide", currentSlide);
-
 	// });
-
 	// $('.testimonials').on('afterChange', function(event, slick, direction){
-
-	// 	$(qWash).addClass('turn');
-
-	// 	$(qImg2).attr('src', 'img/components/testimonials/testimonial-'+qStateB+'.png');
-
+	// // 	$(qWash).addClass('turn');
+	// 	$(after).attr('src', 'img/components/quote/gogetter-'+stateB+'.png');
 	// });
 
 
