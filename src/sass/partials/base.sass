@@ -1,0 +1,105 @@
+html,
+body,
+header,
+footer,
+ul, ol, li,
+h1, h2, h3, h4, p, a
+  margin:   0
+  padding:  0
+
+h1, h2, h3, h4
+  font-family:    "c-std-bold", "Noto Serif", Georgia, serif
+  color:          blue
+  font-size:      40px
+  letter-spacing: -0.045em
+  line-height:    45px
+
+ul li, ol li, p, dl, dt, dd
+  font-family:  'hndi-std', serif
+  font-size:    11px
+  line-height:  14px
+  color:        blue
+
+hr
+  visibility: hidden
+  
+section
+  position: relative
+  overflow: hidden
+  line-height: 0
+  width:    100vw
+  height:   100vh
+
+header,
+footer
+  background: repeating-linear-gradient( -45deg, #fff1f1, #fff1f1 5px, #fff 5px, #fff 100px)
+  
+  
+footer
+  .para
+    margin-bottom: 0.5em
+    display: block
+  a
+    color: blue
+    &.btn
+      background: blue
+      color: white
+      padding: 1em 0.5em
+      display: block
+    &:hover
+      background: white
+
+
+header,
+footer
+  position: relative
+  width:    100vw
+  min-height:   100vh
+  overflow: hidden
+
+  ul, ol, h4
+    padding: 20px
+    text-align: left
+
+  h1, h2, h3
+    padding: 0 20px
+    text-align: left
+
+  h1
+    padding-top: 20px
+    
+  h4
+    padding-bottom: 2em
+    max-width: 560px
+
+  ul, ol
+    max-width: 600px
+    li
+      list-style: none
+    &.worklist
+      column-count:   3
+      column-gap:     2em
+
+@media (max-width: 800px)
+  footer
+    ul.worklist
+      column-count:   3
+      column-gap:     2em
+
+@media (max-width: 600px)
+  footer
+    ul.worklist
+      column-count:   2
+      column-gap:     2em
+      
+@media (max-width: 300px)
+  footer
+    ul.worklist
+      column-count:   1
+      column-gap:     2em
+
+
+html
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit

@@ -1,0 +1,82 @@
+section.caption
+  pointer-events: none
+  transition:  opacity ease 200ms
+  height:   100vh
+  width:    100vw
+  position: fixed
+  top:      0
+  left:     0
+  z-index:  999999
+
+
+  #blurb
+    position:   absolute
+    background: white
+    background: repeating-linear-gradient( -45deg, #fff1f1, #fff1f1 5px, #fff 5px, #fff 100px)
+    transition: opacity ease 200ms
+    // border-top: 1px solid blue
+    opacity:    1
+    right:      0
+    bottom:     0
+    height:     8em
+    width:      50%
+    z-index:    999997
+    padding:    1em
+
+    &.hidden
+      opacity: 0
+
+    dl
+      margin: 0
+      padding: 0
+      line-height: 1.5em
+      
+      dt
+        display: none
+      dd
+        margin: 0
+        padding: 0
+  
+      dd.project
+        display: inline
+      dd.client
+        display: inline
+
+      dd.role 
+      dd.year 
+
+  #close
+    position:       absolute
+    pointer-events: auto 
+    user-select:    none
+    background:     blue
+    outline:        5px solid blue
+    z-index:        999998
+    transition:     opacity ease 200ms
+    
+    right:    20px
+    bottom:   30px
+    padding:  5px
+    width:    40px
+    height:   40px
+
+    img
+      transition: transform 300ms ease
+      transform: rotate(-180deg)
+    
+    &:hover
+      cursor: pointer
+
+    &.active
+      img
+        transform:  rotate(-45deg)
+
+@media (max-width: 400px)
+  section.caption
+    #close
+      bottom: 10px
+      right: 10px
+    #blurb
+      bottom: 0
+      left: 0
+      width: 100vw

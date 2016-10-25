@@ -1,0 +1,92 @@
+.cover
+  background-size: cover
+.contain
+  background-size: contain
+.center
+  background-position: 50% 50%
+.single
+  background-repeat: no-repeat
+.bg
+  background-color: #ebebeb
+
+section
+  border-top: 10px solid white
+  border-right: 10px solid white
+  border-left: 10px solid white
+  
+  .col
+    height: 100vh
+
+section.lgn
+  background-image: url("../img/lgn/redbull.jpg")
+
+section.gr.app
+  background-image: url("../img/gr/app.png"), url("../img/global/graph.gif")
+  background-repeat:  no-repeat, repeat
+  background-size: contain, auto
+  
+section.gr.print
+  background-image:  url("../img/gr/print.png")
+
+section.gfc .col
+  &:nth-child(1)
+    background-image: url("../img/gfc/gfc-1.png")
+  &:nth-child(2)
+    background-image: url("../img/gfc/gfc-2.png")
+
+section.clarks .col
+  &:nth-child(1)
+    background-image: url("../img/clarks/lockup.png")
+  &:nth-child(2)
+    background-image: url("../img/clarks/lifestyle.jpg")
+    
+section.sos .col
+  &:nth-child(1)
+    background-image: url("../img/sos/card.png")
+  &:nth-child(2)
+    background-image: url("../img/sos/lifestyle.jpg")
+
+section.reform .col
+  &:nth-child(1)
+    background-image: url("../img/reform/ref-1.png")
+  &:nth-child(2)
+    background-image: url("../img/reform/card.png")
+
+section.orange
+  background-image: url("../img/orange/bg.jpg")
+
+section.ideahouse
+  &.phone
+    background-image: url("../img/ih/phone-2.jpg")
+  &.book
+    background-image: url("../img/ih/book.jpg")
+
+section.beggars
+  .turn
+    transition: transform 300ms ease
+    .col
+      height: auto
+      margin-right:   10px
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+
+@media (max-width: 700px)
+  section.beggars
+    background-image: url("../img/beggars/stars.gif")
+
+@media (max-width: 500px)
+  section.beggars
+    .turn
+      transform-origin: center
+      transform: rotate(-90deg)
+
+
+
+section.jarvis
+  .rt
+    position: absolute
+    bottom:   40px
+    right:    40px
+    width:    100px

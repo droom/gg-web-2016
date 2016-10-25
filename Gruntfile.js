@@ -14,10 +14,9 @@ module.exports = function(grunt) {
       sass: {
         files: [
         'src/sass/*.sass',
-        'src/sass/lib/*.sass',
-        'src/sass/sections/*.sass',
         'src/sass/partials/*.sass',
-        'src/sass/motion/*.sass'
+        'src/sass/sections/*.sass'
+
         ],
         tasks: ['sass'],
       },
@@ -31,7 +30,9 @@ module.exports = function(grunt) {
         files: [
         'src/jade/*.jade',
         'src/jade/sections/*.jade',
-        'src/jade/partials/*.jade'
+        'src/jade/partials/*.jade',
+        'src/jade/partials/footer/*.jade'
+
         ],
         tasks: ['jade'],
       },
@@ -39,7 +40,6 @@ module.exports = function(grunt) {
       postcss: {
         files: [
         'src/sass/*.sass',
-        'src/sass/sections/*.sass',
         'src/sass/partials/*.sass'
         ],
 
@@ -54,12 +54,11 @@ module.exports = function(grunt) {
       js: {
         src: [
         'src/lib/jquery-2.2.0.js',
-        'src/lib/easing.js',
-        'src/lib/noframework.waypoints.js',
-        'src/lib/slick.js',
-        'src/js/*.js'
+        'src/lib/jquery.waypoints.js',
+        'src/js/circus.js'
+
         ],
-        dest: 'dist/js/main.min.js',
+        dest: 'dist/js/circus.js',
       },
     },
 
@@ -69,8 +68,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'src/js/*.js',
-        dest: 'dist/js/main.min.js'
+        src: 'dist/js/circus.js',
+        dest: 'dist/js/circus.min.js'
       }
     },
 
@@ -80,7 +79,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'dist/css/style.css': 'src/sass/style.sass',
+          'dist/css/tnr.css': 'src/sass/tnr.sass',
         }
       }
     },
@@ -95,7 +94,7 @@ module.exports = function(grunt) {
           ]
         },
         dist: {
-          src: 'dist/css/style.css'
+          src: 'dist/css/tnr.css'
         }
       },
 
@@ -118,8 +117,6 @@ module.exports = function(grunt) {
           }]
         }
       },
-
-
 
     });
 

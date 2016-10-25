@@ -1,20 +1,25 @@
-- var appbtns       = true
-- var type          = "large"
-- var page          = "index"
-- var strap         = "Convenience at your fingertips"
-- var titles        = [["Get More Stuff Done", "Learn more", "/path/to" ],  ["Easy & Reliable Help", "Learn more", "/path/to"], ["Reliable Delivery Service", "Learn more", "/path/to"]]
-
 doctype html
 html
-  include partials/head
-  
+  head
+    include partials/head
+
   body
-    include sections/hero
-    include sections/steps
-    include sections/video
-    include sections/quad
-    include sections/app
-    include sections/roundels-posters
-    include sections/earn
-    include sections/footer
-    include partials/scripts
+    .wrap
+      include partials/header
+      include sections/email
+      include sections/gfc
+      include sections/beggars
+      include sections/jarvis
+      include sections/gr-app
+      include sections/gr-print
+      
+      include sections/clarks
+      include sections/ideahouse
+      include sections/lgn
+      include sections/kia
+      include sections/sos
+      //- include sections/reform
+      include sections/orange
+      include partials/footer
+
+    script(type='text/javascript', src='js/circus.js')
