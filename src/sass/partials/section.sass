@@ -10,12 +10,16 @@
   background-color: #ebebeb
 
 section
-  border-top: 10px solid white
+  border-top:   10px solid white
   border-right: 10px solid white
-  border-left: 10px solid white
+  border-left:  10px solid white
   
   .col
     height: 100vh
+
+section.email
+  video
+    margin: auto
 
 section.lgn
   background-image: url("../img/lgn/redbull.jpg")
@@ -49,11 +53,17 @@ section.sos .col
 section.reform .col
   &:nth-child(1)
     background-image: url("../img/reform/ref-1.png")
+    background-color: blue
   &:nth-child(2)
     background-image: url("../img/reform/card.png")
 
 section.orange
   background-image: url("../img/orange/bg.jpg")
+
+section.doobie
+  background-image: url("../img/doobie/bg.jpg")
+  img
+    margin-top: 5vh
 
 section.ideahouse
   &.phone
@@ -66,7 +76,7 @@ section.beggars
     transition: transform 300ms ease
     .col
       height: auto
-      margin-right:   10px
+      margin-right: 10px
       &:first-child
         margin-left: 0
       &:last-child
@@ -81,7 +91,6 @@ section.beggars
     .turn
       transform-origin: center
       transform: rotate(-90deg)
-
 
 
 section.jarvis

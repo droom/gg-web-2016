@@ -10532,13 +10532,17 @@ return jQuery;
 
   var cap2 = new Waypoint({element: document.getElementById('header'), handler: function(){
     $("#caption").css('opacity', '0');
+    $("#continue").css('opacity', '1');
 
     fCaption(0);
   }, offset: '-30%'});
 
   var cap1 = new Waypoint({ element: document.getElementById('header'),handler:function(){
     $("#caption").css('opacity', '1');
+    $("#continue").css('opacity', '0');
   }, offset: '-35%'});
+
+
 
   var cap3 = new Waypoint({element: document.getElementById('footer'), handler: function(){
     $("#caption").css('opacity', '0');

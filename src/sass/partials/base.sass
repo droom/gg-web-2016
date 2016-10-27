@@ -14,7 +14,7 @@ h1, h2, h3, h4
   letter-spacing: -0.045em
   line-height:    45px
 
-ul li, ol li, p, dl, dt, dd
+ul li, ol li, p, a, dl, dt, dd
   font-family:  'hndi-std', serif
   font-size:    11px
   line-height:  14px
@@ -30,53 +30,57 @@ section
   width:    100vw
   height:   100vh
 
+.para
+  display: block
+
+a
+  color: blue
+  
+  &.btn
+    transition: all ease 200ms
+    padding: 1em 1.1em
+    display: inline
+    text-decoration: none
+    border: 1px solid blue
+    border-radius: 2px
+    &:hover
+      background: #eee
+
+    &.cta
+      background: blue
+      color: white
+      
+      &:hover
+        background: none
+        color: blue
+        
+    
+    & + .btn
+      margin-left: 1em
+      
+  &:hover
+    background: white
+
 header,
 footer
   background: repeating-linear-gradient( -45deg, #fff1f1, #fff1f1 5px, #fff 5px, #fff 100px)
-  
-  
-footer
-  .para
-    margin-bottom: 0.5em
-    display: block
-  a
-    color: blue
-    &.btn
-      background: blue
-      color: white
-      padding: 1em 0.5em
-      display: block
-    &:hover
-      background: white
-
-
-header,
-footer
-  position: relative
-  width:    100vw
-  min-height:   100vh
-  overflow: hidden
-
-  ul, ol, h4
-    padding: 20px
-    text-align: left
-
-  h1, h2, h3
-    padding: 0 20px
-    text-align: left
-
-  h1
-    padding-top: 20px
-    
+  position:   relative
+  width:      100vw
+  min-height: 100vh
+  overflow:   hidden
+  padding:    20px
+  text-align: left
   h4
-    padding-bottom: 2em
-    max-width: 560px
-
+    margin-bottom: 1em
+    max-width: 650px
+     
   ul, ol
     max-width: 600px
+    
     li
       list-style: none
     &.worklist
+      margin-top:     4em
       column-count:   3
       column-gap:     2em
 
@@ -91,7 +95,18 @@ footer
     ul.worklist
       column-count:   2
       column-gap:     2em
-      
+    
+@media (max-width: 550px)
+  h2
+    color: pink
+  h1,
+  h2,
+  h3
+    display: inline
+    
+    &:after
+      content: "."
+
 @media (max-width: 300px)
   footer
     ul.worklist

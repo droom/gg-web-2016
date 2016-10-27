@@ -8,13 +8,11 @@ section.caption
   left:     0
   z-index:  999999
 
-
   #blurb
     position:   absolute
     background: white
-    background: repeating-linear-gradient( -45deg, #fff1f1, #fff1f1 5px, #fff 5px, #fff 100px)
+    background: repeating-linear-gradient( -45deg, #fff1f1, #fff1f1 3px, #fff 3px, #fff 40px)
     transition: opacity ease 200ms
-    // border-top: 1px solid blue
     opacity:    1
     right:      0
     bottom:     0
@@ -37,10 +35,10 @@ section.caption
         margin: 0
         padding: 0
   
-      dd.project
-        display: inline
-      dd.client
-        display: inline
+      // dd.project
+        // display: inline
+      // dd.client
+        // display: inline
 
       dd.role 
       dd.year 
@@ -71,7 +69,7 @@ section.caption
       img
         transform:  rotate(-45deg)
 
-@media (max-width: 400px)
+@media (max-width: 600px)
   section.caption
     #close
       bottom: 10px
