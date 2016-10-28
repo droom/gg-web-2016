@@ -10471,23 +10471,41 @@ return jQuery;
     window.Zepto.fn.waypoint = createExtension(window.Zepto)
   }
 }())
-;;$(document).ready(function() {
+;;/*!
+Waypoints Inview Shortcut - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+*/
+!function(){"use strict";function t(){}function e(t){this.options=i.Adapter.extend({},e.defaults,t),this.axis=this.options.horizontal?"horizontal":"vertical",this.waypoints=[],this.element=this.options.element,this.createWaypoints()}var i=window.Waypoint;e.prototype.createWaypoints=function(){for(var t={vertical:[{down:"enter",up:"exited",offset:"100%"},{down:"entered",up:"exit",offset:"bottom-in-view"},{down:"exit",up:"entered",offset:0},{down:"exited",up:"enter",offset:function(){return-this.adapter.outerHeight()}}],horizontal:[{right:"enter",left:"exited",offset:"100%"},{right:"entered",left:"exit",offset:"right-in-view"},{right:"exit",left:"entered",offset:0},{right:"exited",left:"enter",offset:function(){return-this.adapter.outerWidth()}}]},e=0,i=t[this.axis].length;i>e;e++){var n=t[this.axis][e];this.createWaypoint(n)}},e.prototype.createWaypoint=function(t){var e=this;this.waypoints.push(new i({context:this.options.context,element:this.options.element,enabled:this.options.enabled,handler:function(t){return function(i){e.options[t[i]].call(e,i)}}(t),offset:t.offset,horizontal:this.options.horizontal}))},e.prototype.destroy=function(){for(var t=0,e=this.waypoints.length;e>t;t++)this.waypoints[t].destroy();this.waypoints=[]},e.prototype.disable=function(){for(var t=0,e=this.waypoints.length;e>t;t++)this.waypoints[t].disable()},e.prototype.enable=function(){for(var t=0,e=this.waypoints.length;e>t;t++)this.waypoints[t].enable()},e.defaults={context:window,enabled:!0,enter:t,entered:t,exit:t,exited:t},i.Inview=e}();;$(document).ready(function() {
 
   var captionArr = [{
     "project"  : "Responsive Email Newsletter",
     "client"   : "Kia Motors",
     "role"     : "Design Lead",
     "year"     : "2011",
-    "desc"     : "I was the Lead Designer for Kia’s responsive email newsletters, working closely with Front-End Developers to create an attractive and robust. The format has since been rolled out to all of Kia's email communications."
+    "desc"     : "Lead Designer for Kia’s responsive email newsletters, working closely with Front-End Developers to create an attractive and robust. The format has since been rolled out to all of Kia's email communications."
   },
   
+
   {
-    "project"  : "Catalogue Jacket",
-    "client"   : "Ideahouse",
-    "role"     : "Design/Artworke",
+    "project"  : "Google Font Previewer for Chrome",
+    "client"   : "—",
+    "role"     : "Design (Identity)",
     "year"     : "2016",
-    "desc"     : "Design and artworking for Ideahouse's 2016 product cataloge. The jacket features a smorgasboard of sample items, with shots of the underside present on the inside of the jacket."
+    "desc"     : "The Google Font Previewer by Pamela Fox serves 25,582 users and earlier in the year I redesigned the Identity, based on Google's 'Product Sans' typeface."
   },
+
+
+  {
+    "project"  : "OLA",
+    "client"   : "Orange Brand",
+    "role"     : "Motion",
+    "year"     : "2012",
+    "desc"     : "Carousel animation for the Orange Brand homepage. Created in After Effects. Other work for Orange included instructional motion pieces, Flash carousels and email designs."
+  },
+
+
   {
     "project"  : "Homepage Hero",
     "client"   : "Orange Brand",
@@ -10495,6 +10513,9 @@ return jQuery;
     "year"     : "2012",
     "desc"     : "Carousel animation for the Orange Brand homepage. Created in After Effects. Other work for Orange included instructional motion pieces, Flash carousels and email designs."
   },
+
+
+
   {
     "project"  : "Korahnzo McGayle",
     "client"   : "LGN",
@@ -10502,24 +10523,63 @@ return jQuery;
     "year"     : "2011",
     "desc"     : "I was approached by film-maker George Nevin to create suitable titles for this Red Bull short submission, featuringKorahn Gayle. Watch the full HD version here."
   },
+
+
+
+
+
   {
-    "project"  : "Google Font Changer",
-    "client"   : "Reformist.io",
-    "role"     : "Design",
+    "project"  : "Product Catalogue",
+    "client"   : "Ideahouse",
+    "role"     : "Artwork",
     "year"     : "2016",
-    "desc"     : "Pamela Fox, Chrome extention, serves [] people, purpose."
+    "desc"     : "Artworking for Ideahouse's 2016 product cataloge. The jacket features a smorgasboard of sample items, with shots of the underside visible on the inside of the jacket."
   },
+
+  {
+    "project"  : "Webapp",
+    "client"   : "Ideahouse",
+    "role"     : "Design (UX, UI), Front-end",
+    "year"     : "2016",
+    "desc"     : ""
+  },
+
+
+
+
+
   ];
 
 
 
   function fCaption(section){
-    $("dd.client").text("("+captionArr[section].client+")");
+    // $("dd.client").text("("+captionArr[section].client+")");
+    $("dd.client").text(captionArr[section].client);
     $("dd.project").text(captionArr[section].project);
     $("dd.role").text(captionArr[section].role);
     $("dd.year").text(captionArr[section].year);
     $("dd.desc").text(captionArr[section].desc);
   }
+
+
+  var vh;
+  var vhalf;
+
+
+
+  function fWindow(){
+    vh = $(window).height();
+    vhalf = Math.floor(vh/2);
+    console.log(vh);
+    console.log(vhalf);
+
+  };
+
+  $(window).resize(function() {
+    fWindow();
+  });
+
+  fWindow();
 
 
   $("#close").click(function(e){
@@ -10530,37 +10590,61 @@ return jQuery;
 
   $("#caption").css('opacity', '0');
 
-  var cap2 = new Waypoint({element: document.getElementById('header'), handler: function(){
+
+
+  var capA = new Waypoint({element: document.getElementById('header'), handler: function(){
     $("#caption").css('opacity', '0');
     $("#continue").css('opacity', '1');
-
-    fCaption(0);
   }, offset: '-30%'});
 
-  var cap1 = new Waypoint({ element: document.getElementById('header'),handler:function(){
+  var capB = new Waypoint({ element: document.getElementById('header'),handler:function(){
     $("#caption").css('opacity', '1');
     $("#continue").css('opacity', '0');
   }, offset: '-35%'});
 
 
-
-  var cap3 = new Waypoint({element: document.getElementById('footer'), handler: function(){
+  var capC = new Waypoint({element: document.getElementById('footer'), handler: function(){
     $("#caption").css('opacity', '0');
     
   }, offset: '90%'});
 
-  var cap4 = new Waypoint({ element: document.getElementById('footer'),handler:function(){
+  var capD = new Waypoint({ element: document.getElementById('footer'),handler:function(){
     $("#caption").css('opacity', '1');
   }, offset: '95%'});
 
 
-  // var cap3 = new Waypoint({ element: document.getElementById('email'), handler: function(){
-  //   fCaption(2);
-  // }, offset: -40});
 
-  // var cap4 = new Waypoint({ element: document.getElementById('gfc'), handler: function(){
+  // var cap1 = new Waypoint({ element: document.getElementById('email'), handler: function(){
+  //   fCaption(0);
+  // }, offset: '50%'});
+
+  // var cap2 = new Waypoint({ element: document.getElementById('gfc'), handler: function(){
+  //   fCaption(1);
+  // }, offset: '50%'});
+
+  // var cap3 = new Waypoint({ element: document.getElementById('beggars'), handler: function(){
   //   fCaption(3);
-  // }, offset: -40});
+  // }, offset: '50%'});
+
+
+
+var inview = new Waypoint.Inview({
+  element: $('#gfc')[0],
+  enter: function(direction) {
+    console.log('enter')
+  },
+  entered: function(direction) {
+    console.log('entered')
+  },
+  exit: function(direction) {
+    console.log('exit')
+  },
+  exited: function(direction) {
+    console.log('exited')
+  }
+})
+
+
 
 
 

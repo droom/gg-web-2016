@@ -55,13 +55,12 @@ module.exports = function(grunt) {
         src: [
         'src/lib/jquery-2.2.0.js',
         'src/lib/jquery.waypoints.js',
+        'src/lib/jquery.inview.js',
         'src/js/circus.js'
-
         ],
         dest: 'dist/js/circus.js',
       },
     },
-
 
     uglify: {
       options: {

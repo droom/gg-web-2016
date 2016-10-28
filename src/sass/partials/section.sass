@@ -13,7 +13,6 @@ section
   border-top:   10px solid white
   border-right: 10px solid white
   border-left:  10px solid white
-  
   .col
     height: 100vh
 
@@ -23,14 +22,6 @@ section.email
 
 section.lgn
   background-image: url("../img/lgn/redbull.jpg")
-
-section.gr.app
-  background-image: url("../img/gr/app.png"), url("../img/global/graph.gif")
-  background-repeat:  no-repeat, repeat
-  background-size: contain, auto
-  
-section.gr.print
-  background-image:  url("../img/gr/print.png")
 
 section.gfc .col
   &:nth-child(1)
@@ -43,12 +34,16 @@ section.clarks .col
     background-image: url("../img/clarks/lockup.png")
   &:nth-child(2)
     background-image: url("../img/clarks/lifestyle.jpg")
+    background-position: 50% 70%
+    background-color: #252703
     
+
 section.sos .col
   &:nth-child(1)
-    background-image: url("../img/sos/card.png")
-  &:nth-child(2)
     background-image: url("../img/sos/lifestyle.jpg")
+    background-position: 25% 50%
+  &:nth-child(2)
+    background-image: url("../img/sos/card.png")
 
 section.reform .col
   &:nth-child(1)
@@ -59,16 +54,28 @@ section.reform .col
 
 section.orange
   background-image: url("../img/orange/bg.jpg")
+  background-color: #414141
 
 section.doobie
   background-image: url("../img/doobie/bg.jpg")
+  background-color: #9c9290
   img
     margin-top: 5vh
 
+section.gr
+  &.app
+    background-image: url("../img/gr/app.png"), url("../img/global/graph.gif")
+    background-repeat:  no-repeat, repeat
+    background-size: contain, auto
+  &.print
+    background-image:  url("../img/gr/print.png")
+  
 section.ideahouse
-  &.phone
+  &.app
     background-image: url("../img/ih/phone-2.jpg")
-  &.book
+    background-color: #cadde3
+
+  &.print
     background-image: url("../img/ih/book.jpg")
 
 section.beggars
@@ -77,6 +84,21 @@ section.beggars
     .col
       height: auto
       margin-right: 10px
+      &.ward
+        background: #cecc69
+        background: linear-gradient(to bottom, #cecc69 0%,#6f9253 100%)
+      &.discovery
+        background: #ed7834
+        background: linear-gradient(to bottom, #ed7834 0%,#f29934 100%)
+      &.help
+        background: 676767
+      &.sfa
+        background: 000000
+      &.sufjan
+        background: #b09187
+      &.fires
+        background: #211d1d
+
       &:first-child
         margin-left: 0
       &:last-child
