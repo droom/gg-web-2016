@@ -55,10 +55,10 @@ module.exports = function(grunt) {
         src: [
         'src/lib/jquery-2.2.0.js',
         'src/lib/jquery.waypoints.js',
-        'src/lib/jquery.inview.js',
-        'src/js/circus.js'
+        // 'src/lib/jquery.inview.js',
+        'src/js/glance.js'
         ],
-        dest: 'dist/js/circus.js',
+        dest: 'dist/js/glance.js',
       },
     },
 
@@ -67,8 +67,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'dist/js/circus.js',
-        dest: 'dist/js/circus.min.js'
+        src: 'dist/js/glance.js',
+        dest: 'dist/js/glance.min.js'
       }
     },
 
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'dist/css/tnr.css': 'src/sass/tnr.sass',
+          'dist/css/glance.css': 'src/sass/glance.sass',
         }
       }
     },
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
           ]
         },
         dist: {
-          src: 'dist/css/tnr.css'
+          src: 'dist/css/glance.css'
         }
       },
 
